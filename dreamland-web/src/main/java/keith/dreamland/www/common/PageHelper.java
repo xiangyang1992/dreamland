@@ -247,7 +247,7 @@ public class PageHelper implements Interceptor {
 				pageNum = 1;
 			}
 			if (pageSize == null || pageSize < 1) {
-				pageSize = 7;
+				pageSize = 5;
 			}
 			this.pageNum = pageNum;
 			this.pageSize = pageSize;
