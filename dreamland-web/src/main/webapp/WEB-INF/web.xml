@@ -70,6 +70,16 @@
     <servlet-name>default</servlet-name>
     <url-pattern>*.css</url-pattern>
   </servlet-mapping>
+  
+  <!--自定义过滤器-->
+  <filter>
+    <filter-name>dispatcherFilter</filter-name>
+    <filter-class>keith.dreamland.www.interceptor.IndexJspFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>dispatcherFilter</filter-name>
+    <url-pattern>/index.jsp</url-pattern>
+  </filter-mapping>
 
   <!--验证码-->
   <servlet>
@@ -82,7 +92,7 @@
   </servlet-mapping>
 
   <welcome-file-list>
-    <welcome-file>login.jsp</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
 
   <!-- session配置 -->

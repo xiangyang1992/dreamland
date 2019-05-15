@@ -82,7 +82,7 @@
         </div>
         <div style="margin-left: 340px"> <span style="font-size: 17px;">您登陆梦境网的用户名为：<span style="color: green;font-weight: bold">${email}</span></span></div>
         <div style="margin-left: 420px;margin-top: 40px">
-            <button class="btn btn-primary" type="button" id="btn" style="width: 150px"><a href="${ctx}/login"></a>点此登陆</button>
+            <button class="btn btn-primary" type="button" id="btn" style="width: 150px">点此登陆</button>
         </div>
 
 
@@ -209,7 +209,7 @@
 
 <script type="text/javascript" src="${ctx}/css/zui/js/zui.min.js"></script>
 </body>
-<script language=javascript>
+<script  type="text/javascript" >
     function  showImg(){
         document.getElementById("wxImg").style.display='block';
     }

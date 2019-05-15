@@ -111,7 +111,7 @@ public class RegisterController {
             user.setImgUrl("/images/icon_m.jpg");
             //邮件激活码
             String validateCode = MD5Util.encodeToHex("salt" + email + password);
-                redisTemplate.opsForValue().set(email,validateCode,24, TimeUnit.HOURS);//24小时有效  redis保存激活码
+            redisTemplate.opsForValue().set(email,validateCode,24, TimeUnit.HOURS);//24小时有效  redis保存激活码
             userService.regist(user);
             log.info("注册成功");
             SendEmail.sendEmailMessage(email, validateCode);

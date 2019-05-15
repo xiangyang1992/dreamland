@@ -1,16 +1,14 @@
 <%@ page import="java.util.UUID" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+<c:set var="ctx" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="${ctx}/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <title>个人空间</title>
+    <link href="${ctx}/css/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="${ctx}/css/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"/>
 
     <link href="${ctx}/css/zui/css/zui.min.css" rel="stylesheet"/>
@@ -19,8 +17,10 @@
     <script type="text/javascript" src="${ctx}/css/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="${ctx}/css/zui/js/zui.min.js"></script>
     <script src="${ctx}/css/zui/lib/kindeditor/kindeditor.min.js"></script>
-    <link href="${ctx}/css/My_css/my.css?<%=UUID.randomUUID().toString()%>" rel="stylesheet" type="text/css">
-    <title>个人空间</title>
+    <link href="${ctx}/css/My_css/my.css?<%=UUID.randomUUID().toString()%>" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
 <body>
 <nav class="navbar navbar-inverse" role="navigation">
@@ -69,7 +69,7 @@
     </div>
 
 </nav>
-<!-- 左侧菜单栏-->
+    <!-- 左侧菜单栏-->
 <div class="author-card follow-box">
     <div class="designer-card card-media">
 
@@ -99,8 +99,8 @@
 
                 </div>
                 <div style="margin-left: 30px;float: left">
-                    <input type="button" title="发私信" class="btn-default-secondary btn-current private-letter" value="私信"
-                           onclick="" z-st="privateMsg">
+                <input type="button" title="发私信" class="btn-default-secondary btn-current private-letter" value="私信"
+                       onclick="" z-st="privateMsg">
                 </div>
             </div>
 
@@ -162,7 +162,7 @@
             </div>
             <a href="/users/31123326/" target="_blank" onclick="" >
                 <h2 class="author-h2">
-                    白龙马
+                   白龙马
                 </h2>
             </a>
 
@@ -396,32 +396,32 @@
 
 </div>
 
-<!-- 中间内容展示 -->
-<div class="dreamland-content" style="background-color: white">
-    <div class="content-bar">
-        <div id="fa-dreamland" style="background-color: #B22222;width: 120px;text-align: center;height: 40px;line-height: 40px;float: left" onclick="release_dreamland();">
+    <!-- 中间内容展示 -->
+    <div class="dreamland-content" style="background-color: white">
+        <div class="content-bar">
+            <div id="fa-dreamland" style="background-color: #B22222;width: 120px;text-align: center;height: 40px;line-height: 40px;float: left" onclick="release_dreamland();">
 
-            <span id="fa-span" style="color: white">发布的梦</span>
+                 <span id="fa-span" style="color: white">发布的梦</span>
+
+            </div>
+
+            <div id="manage-dreamland" style="background-color: #F0F0F0;width: 120px;text-align: center;height: 40px;line-height: 40px;float: left;margin-left: 20px" onclick="manage_dreamland();">
+
+                <span id="manage-span" style="color: black">管理梦</span>
+
+            </div>
+
+            <div id="personal-div" style="background-color: #F0F0F0;width: 120px;text-align: center;height: 40px;line-height: 40px;float: left;margin-left: 20px" onclick="personal_dreamland();">
+
+                <span id="personal-span"  style="color: black">私密梦</span>
+
+            </div>
 
         </div>
 
-        <div id="manage-dreamland" style="background-color: #F0F0F0;width: 120px;text-align: center;height: 40px;line-height: 40px;float: left;margin-left: 20px" onclick="manage_dreamland();">
-
-            <span id="manage-span" style="color: black">管理梦</span>
-
-        </div>
-
-        <div id="personal-div" style="background-color: #F0F0F0;width: 120px;text-align: center;height: 40px;line-height: 40px;float: left;margin-left: 20px" onclick="personal_dreamland();">
-
-            <span id="personal-span"  style="color: black">私密梦</span>
-
-        </div>
-
-    </div>
-
-    <div id="release-dreamland" style="height: 700px;margin-top: 50px;width: 100%">
-        <ul style="font-size: 12px">
-            <c:forEach var="cont" items="${page.result}" varStatus="i">
+        <div id="release-dreamland" style="height: 700px;margin-top: 50px;width: 100%">
+            <ul style="font-size: 12px">
+                <c:forEach var="cont" items="${page.result}" varStatus="i">
                 <li class="dreamland-fix">
                     <a>${cont.title}</a>
                     <span class="bar-read">评论 (${cont.commentNum})</span>
@@ -430,42 +430,42 @@
 
                     <hr/>
                 </li>
-            </c:forEach>
-
-        </ul>
-
-        <div style="float: left;position: absolute;bottom: 1080px;margin-left: 20px">
-
-            <ul class="pager pager-loose">
-                <c:if test="${page.pageNum <= 1}">
-                    <li class="previous"><a href="javascript:void(0);">« 上一页</a></li>
-                </c:if>
-                <c:if test="${page.pageNum > 1}">
-                    <li class="previous"><a href="${ctx}/list?pageNum=${page.pageNum-1}&&id=${user.id}">« 上一页</a></li>
-                </c:if>
-                <c:forEach begin="1" end="${page.pages}" var="pn">
-                    <c:if test="${page.pageNum==pn}">
-                        <li class="active"><a href="javascript:void(0);">${pn}</a></li>
-                    </c:if>
-                    <c:if test="${page.pageNum!=pn}">
-                        <li ><a href="${ctx}/list?pageNum=${pn}&&id=${user.id}">${pn}</a></li>
-                    </c:if>
                 </c:forEach>
 
-                <c:if test="${page.pageNum>=page.pages}">
-                    <li><a href="javascript:void(0);">下一页 »</a></li>
-                </c:if>
-                <c:if test="${page.pageNum<page.pages}">
-                    <li><a href="${ctx}/list?pageNum=${page.pageNum+1}&&id=${user.id}">下一页 »</a></li>
-                </c:if>
-
             </ul>
-        </div>
 
-    </div>
-    <div id="update-dreamland" style="height: 700px;margin-top: 50px;width: 100%;display: none" >
-        <ul style="font-size: 12px">
-            <c:forEach var="cont" items="${page.result}" varStatus="i">
+            <div style="float: left;position: absolute;bottom: 1080px;margin-left: 20px">
+
+                <ul class="pager pager-loose">
+                    <c:if test="${page.pageNum <= 1}">
+                        <li class="previous"><a href="javascript:void(0);">« 上一页</a></li>
+                    </c:if>
+                    <c:if test="${page.pageNum > 1}">
+                        <li class="previous"><a href="${ctx}/list?pageNum=${page.pageNum-1}&&id=${user.id}">« 上一页</a></li>
+                    </c:if>
+                    <c:forEach begin="1" end="${page.pages}" var="pn">
+                        <c:if test="${page.pageNum==pn}">
+                            <li class="active"><a href="javascript:void(0);">${pn}</a></li>
+                        </c:if>
+                        <c:if test="${page.pageNum!=pn}">
+                            <li ><a href="${ctx}/list?pageNum=${pn}&&id=${user.id}">${pn}</a></li>
+                        </c:if>
+                    </c:forEach>
+
+                    <c:if test="${page.pageNum>=page.pages}">
+                        <li><a href="javascript:void(0);">下一页 »</a></li>
+                    </c:if>
+                    <c:if test="${page.pageNum<page.pages}">
+                        <li><a href="${ctx}/list?pageNum=${page.pageNum+1}&&id=${user.id}">下一页 »</a></li>
+                    </c:if>
+
+                </ul>
+            </div>
+
+        </div>
+        <div id="update-dreamland" style="height: 700px;margin-top: 50px;width: 100%;display: none" >
+            <ul style="font-size: 12px">
+                <c:forEach var="cont" items="${page.result}" varStatus="i">
                 <li class="dreamland-fix">
                     <a>${cont.title}</a>
                     <span class="bar-delete">删除</span>
@@ -474,55 +474,55 @@
 
                     <hr/>
                 </li>
-            </c:forEach>
-
-        </ul>
-
-
-        <div style="float: left;position: absolute;bottom: 1080px;margin-left: 20px">
-            <ul class="pager pager-loose">
-                <c:if test="${page.pageNum <= 1}">
-                    <li class="previous"><a href="javascript:void(0);">« 上一页</a></li>
-                </c:if>
-                <c:if test="${page.pageNum > 1}">
-                    <li class="previous"><a href="${ctx}/list?pageNum=${page.pageNum-1}&&id=${user.id}">« 上一页</a></li>
-                </c:if>
-                <c:forEach begin="1" end="${page.pages}" var="pn">
-                    <c:if test="${page.pageNum==pn}">
-                        <li class="active"><a href="javascript:void(0);">${pn}</a></li>
-                    </c:if>
-                    <c:if test="${page.pageNum!=pn}">
-                        <li ><a href="${ctx}/list?pageNum=${pn}&&id=${user.id}">${pn}</a></li>
-                    </c:if>
                 </c:forEach>
-
-                <c:if test="${page.pageNum>=page.pages}">
-                    <li><a href="javascript:void(0);">下一页 »</a></li>
-                </c:if>
-                <c:if test="${page.pageNum<page.pages}">
-                    <li><a href="${ctx}/list?pageNum=${page.pageNum+1}&&id=${user.id}">下一页 »</a></li>
-                </c:if>
 
             </ul>
 
+
+            <div style="float: left;position: absolute;bottom: 1080px;margin-left: 20px">
+                <ul class="pager pager-loose">
+                    <c:if test="${page.pageNum <= 1}">
+                        <li class="previous"><a href="javascript:void(0);">« 上一页</a></li>
+                    </c:if>
+                    <c:if test="${page.pageNum > 1}">
+                        <li class="previous"><a href="${ctx}/list?pageNum=${page.pageNum-1}&&id=${user.id}">« 上一页</a></li>
+                    </c:if>
+                    <c:forEach begin="1" end="${page.pages}" var="pn">
+                        <c:if test="${page.pageNum==pn}">
+                            <li class="active"><a href="javascript:void(0);">${pn}</a></li>
+                        </c:if>
+                        <c:if test="${page.pageNum!=pn}">
+                            <li ><a href="${ctx}/list?pageNum=${pn}&&id=${user.id}">${pn}</a></li>
+                        </c:if>
+                    </c:forEach>
+
+                    <c:if test="${page.pageNum>=page.pages}">
+                        <li><a href="javascript:void(0);">下一页 »</a></li>
+                    </c:if>
+                    <c:if test="${page.pageNum<page.pages}">
+                        <li><a href="${ctx}/list?pageNum=${page.pageNum+1}&&id=${user.id}">下一页 »</a></li>
+                    </c:if>
+
+                </ul>
+
+            </div>
         </div>
-    </div>
 
 
-    <div id="personal-dreamland" style="height: 700px;margin-top: 50px;width: 100%;display: none">
-        <ul style="font-size: 12px">
-            <c:forEach var="cont" items="${page2.result}" varStatus="i">
+        <div id="personal-dreamland" style="height: 700px;margin-top: 50px;width: 100%;display: none">
+            <ul style="font-size: 12px">
+                <c:forEach var="cont" items="${page2.result}" varStatus="i">
                 <li class="dreamland-fix">
                     <a>${cont.title}</a>
                     <span class="bar-delete">删除</span>
                     <span class="bar-update">修改</span>
                     <hr/>
                 </li>
-            </c:forEach>
+                </c:forEach>
 
-        </ul>
+            </ul>
 
-        <div style="float: left;position: absolute;bottom: 1080px;margin-left: 20px">
+            <div style="float: left;position: absolute;bottom: 1080px;margin-left: 20px">
             <ul class="pager pager-loose">
                 <c:if test="${page2.pageNum <= 1}">
                     <li class="previous"><a href="javascript:void(0);">« 上一页</a></li>
@@ -547,21 +547,21 @@
                 </c:if>
 
             </ul>
-        </div>
-    </div>
-
-    <div style="background-color: #EBEBEB;width:800px;height: 20px">
-
-    </div>
-
-    <div class="hot-dreamland" style="height: 1020px">
-        <div style="text-align: center;margin-top: 20px">热梦推荐
-            <span style="color:#B22222 ">hot</span>
+            </div>
         </div>
 
-        <div style="height: 700px;margin-top: 30px;width: 100%">
-            <ul style="font-size: 12px">
-                <c:forEach var="cont" items="${hotPage.result}" varStatus="i">
+        <div style="background-color: #EBEBEB;width:800px;height: 20px">
+
+        </div>
+
+        <div class="hot-dreamland" style="height: 1020px">
+            <div style="text-align: center;margin-top: 20px">热梦推荐
+                <span style="color:#B22222 ">hot</span>
+            </div>
+
+            <div style="height: 700px;margin-top: 30px;width: 100%">
+                <ul style="font-size: 12px">
+                    <c:forEach var="cont" items="${hotPage.result}" varStatus="i">
                     <li class="dreamland-fix">
                         <a>${cont.title}</a>
                         <span class="bar-read">评论 (${cont.commentNum} )</span>
@@ -570,13 +570,13 @@
 
                         <hr/>
                     </li>
-                </c:forEach>
+                    </c:forEach>
 
 
-            </ul>
-        </div>
+                </ul>
+            </div>
 
-        <div style="float: left;position: absolute;bottom: 10px;margin-left: 20px">
+            <div style="float: left;position: absolute;bottom: 10px;margin-left: 20px">
             <ul class="pager pager-loose">
                 <c:if test="${hotPage.pageNum <= 1}">
                     <li class="previous"><a href="javascript:void(0);">« 上一页</a></li>
@@ -601,10 +601,10 @@
                 </c:if>
 
             </ul>
+            </div>
         </div>
-    </div>
 
-</div>
+    </div>
 <!--右侧-->
 
 <div class="ibx-advice" onmouseover="changeBackColor();" onmouseout="back2color();">
@@ -723,13 +723,10 @@
         </div>
     </div>
 </div>
-</body>
-</html>>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+
 
 </body>
+<script>
+
+</script>
 </html>

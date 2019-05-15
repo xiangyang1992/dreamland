@@ -23,9 +23,9 @@ public class IndexJspController extends BaseController {
     private UpvoteService upvoteService;
 
     @RequestMapping(value = "/index_list")
-    public String findAllList(Model model, @RequestParam(value = "id") Long id,
-                              @RequestParam(value = "pageNum") Integer pageNum,
-                              @RequestParam(value = "pageSize") Integer pageSize) {
+    public String findAllList(Model model, @RequestParam(value = "id",required = false) String  id,
+                              @RequestParam(value = "pageNum",required = false ) Integer pageNum,
+                              @RequestParam(value = "pageSize",required = false) Integer pageSize) {
         log.info("--------进入index_list------");
         User user = (User) getSession().getAttribute("user");
         if (user != null) {
@@ -35,4 +35,6 @@ public class IndexJspController extends BaseController {
         model.addAttribute("page", page);
         return "../index";
     }
+
+
 }
