@@ -20,18 +20,17 @@
     <div>
         <h1>Dreamland-梦境网</h1>
     </div>
-    <div style="position: absolute;margin-left: 980px;margin-top: -40px;">
+    <div style="position: absolute;margin-left: 980px;margin-top: -40px">
         <c:if test="${empty user}">
             <a name="tj_login" class="lb" href="login?error=login" style="color: black">[登录]</a>
             &nbsp;&nbsp;
             <a name="tj_login" class="lb" href="register" style="color: black">[注册]</a>
         </c:if>
         <c:if test="${not empty user}">
-            <a name="tj_loginp" href="javascript:void(0);"   class="lb" onclick="personal('${user.id}');" style="color: black"><font color="#9370db">${user.nickName}, 欢迎您！</font></a>
+            <a name="tj_loginp" href="javascript:void(0);" class="lb" onclick="personal('${user.id}');" style="color: black"><font color="black">${user.nickName},欢迎您</font></a>
             &nbsp;&nbsp;
-            <a name="tj_login" class="lb" href="${ctx}/loginout" style="color: black">[退出]</a>
+            <a name="tj_login" class="lb" href="${ctx}/loginout" style="color:black;">[退出]</a>
         </c:if>
-
     </div>
 
     <nav class="navbar navbar-inverse">
@@ -70,9 +69,7 @@
         <div class="col-md-9"  style="background-color: white;">
             <div id="content_col" class="content-main">
                 <!-- 正文开始 -->
-
                 <div class="content-text">
-
                     <div class="author clearfix">
                         <div>
                             <a href="#" target="_blank" rel="nofollow" style="height: 35px" >
