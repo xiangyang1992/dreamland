@@ -8,6 +8,7 @@ import keith.dreamland.www.service.UserService;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -71,6 +72,16 @@ public class LoginController extends BaseController {
             return "../login";
         }
     }
+
+    //退出登录
+    @RequestMapping(value = "/loginout")
+    public String LoginOut(Model model) {
+        log.info("退出登录");
+        getSession().removeAttribute("user");
+        getSession().invalidate();
+        return "../login";
+    }
+
 
     //校验验证码
     public int checkValidateCode(String code) {
