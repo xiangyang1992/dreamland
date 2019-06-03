@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="keith.dreamland.www.dao.CommentMapper">
+    <select id="selectAll" resultMap="commentMap">
+    select c.id,c.children,c.con_id,c.com_id,c.by_id,c.upvote,
+        c.comm_time,c.com_content,u.id as uid,u.email,u.password,u.nick_name,u.phone,u.state,u.img_url,u.enable
+        from comment c,user u WHERE 1=1 AND con_id = #{cid} and c.com_id = u.id order by id desc</select>
+    <resultMap id="commentMap" type="keith.dreamland.www.entity.Comment">
+        <!-- property 表示wang.dreamland.www.entity.Comment中的属性； column 表示表中的列名 -->
+        <id property="id" column="id"/>
+        <result property="children" column="children"/>
+        <result property="conId" column="con_id"/>
+        <result property="comId" column="com_id"/>
+        <result property="byId" column="by_id"/>
+        <result property="comContent" column="com_content"/>
+        <result property="commTime" column="comm_time"/>
+        <result property="upvote" column="upvote"/>
+        <association property="user" javaType="User">
+            <result column="email" property="email" />
+            <result column="password" property="password" />
+            <result column="nick_name" property="nickName" />
+            <result column="phone" property="phone" />
+            <result column="state" property="state" />
+            <result column="img_url" property="imgUrl" />
+            <result column="enable" property="enable" />
+        </association>
+    </resultMap>
+</mapper>

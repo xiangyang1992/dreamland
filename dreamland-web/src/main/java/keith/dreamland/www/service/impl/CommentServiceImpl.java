@@ -20,7 +20,7 @@ public class CommentServiceImpl implements CommentService {
     @Override
     @Transactional
     public int add(Comment comment) {
-        return commentMapper.insert(comment);
+        return commentMapper.insertComment(comment);
     }
 
     @Override
@@ -32,9 +32,7 @@ public class CommentServiceImpl implements CommentService {
     @Override
     @Transactional
     public List<Comment> findAll(Long content_id) {
-        Comment comment = new Comment();
-        comment.setConId(content_id);
-        return commentMapper.select(comment);
+        return commentMapper.selectAll(content_id);
     }
 
     @Override
@@ -48,18 +46,13 @@ public class CommentServiceImpl implements CommentService {
     @Override
     @Transactional
     public List<Comment> findAllFirstComment(Long content_id) {
-        Comment comment = new Comment();
-        comment.setConId(content_id);
-        return commentMapper.select(comment);
+        return commentMapper.selectAllFisrtComment(content_id);
     }
 
     @Override
     @Transactional
     public List<Comment> findAllChildrenComment(Long content_id, String children) {
-        Comment comment = new Comment();
-        comment.setConId(content_id);
-        comment.setChildren(children);
-        return commentMapper.select(comment);
+        return commentMapper.selectAllChildrenComment(content_id, children);
     }
 
     @Override

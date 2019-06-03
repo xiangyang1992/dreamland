@@ -1,7 +1,8 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.76" ALTERNATIVE_JRE_ENABLED="false">
     <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
-    <option name="UPDATING_POLICY" value="update-resources" />
+    <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+    <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
     <deployment>
       <artifact name="dreamland-web:war exploded">
         <settings>

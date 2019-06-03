@@ -1,3 +1,4 @@
+<%@ page import="java.util.UUID" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
@@ -317,28 +318,11 @@
 </div>
 <script type="text/javascript" src="${ctx}/js/jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="${ctx}/css/bootstrap/js/bootstrap.min.js"></script>
-
 <script type="text/javascript" src="${ctx}/css/zui/js/zui.min.js"></script>
-
-
 <script type="text/javascript" src="${ctx}/css/reply/js/jquery.flexText.js"></script>
-
-</body>
-<script language=javascript>
-    function showImg() {
-        document.getElementById("wxImg").style.display = 'block';
-    }
-
-    function hideImg() {
-        document.getElementById("wxImg").style.display = 'none';
-    }
-
-    function personal(uId) {
-        this.location = "${ctx}/list?id=" + uId;
-    }
-
-
+<script>
+    var userId = "${user.id}";
 </script>
-
-
+<script type="text/javascript" src="${ctx}/js/index.js?ver=111"></script>
+</body>
 </html>
