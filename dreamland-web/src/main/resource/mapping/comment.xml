@@ -18,6 +18,64 @@
         <result property="commTime" column="comm_time"/>
         <result property="upvote" column="upvote"/>
         <association property="user" javaType="User">
+            <!--<result column="email" property="email" />-->
+            <!--<result column="password" property="password" />-->
+            <!--<result column="nick_name" property="nickName" />-->
+            <!--<result column="phone" property="phone" />-->
+            <!--<result column="state" property="state" />-->
+            <!--<result column="img_url" property="imgUrl" />-->
+            <!--<result column="enable" property="enable" />-->
+            <id column="uid" property="id"/>
+        </association>
+    </resultMap>
+    
+    <insert id="insertComment" parameterType="comment" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO comment(id,con_id,com_id,by_id,com_content,upvote,children,comm_time) VALUES (#{id},#{con_id},#{com_id},#{by_id},#{com_content},#{upvote},#{children},#{comm_time})
+    </insert>
+
+    <select id="selectAllFirstComment" resultMap="firstCommentMap">
+        SELECT  * from comment c LEFT JOIN USER u ON c.com_id = u.id
+        WHERE 1=1 AND c.con_id = #{cid}
+              AND c.by_id is NULL
+        ORDER BY c.id DESC
+    </select>
+    <resultMap id="firstCommentMap" type="keith.dreamland.www.entity.Comment">
+        <id property="id" column="id"/>
+        <result property="children" column="children" />
+        <result property="conId" column="con_id" />
+        <result property="comId" column="com_id" />
+        <result property="byId" column="by_id" />
+        <result property="upvote" column="upvote" />
+        <result property="commTime" column="comm_time" />
+        <result property="comContent" column="com_content" />
+        <association property="user" javaType="User">
+            <id column="uid" property="id"/>
+            <result column="email" property="email" />
+            <result column="password" property="password" />
+            <result column="nick_name" property="nickName" />
+            <result column="phone" property="phone" />
+            <result column="state" property="state" />
+            <result column="img_url" property="imgUrl" />
+            <result column="enable" property="enable" />
+        </association>
+    </resultMap>
+    <!--查询所有子评论-->
+    <select id="findAllChildrenComment" resultMap="childrenCommentMap">
+        SELECT  * FROM comment c  LEFT JOIN user u ON c.com_id = u.id WHERE c.con_id = #{cid}
+        <if test='children!=null and children!=""'> AND c.id IN (${children})</if>
+    </select>
+    <resultMap type="wang.dreamland.www.entity.Comment" id="childCommentMap">
+        <id property="id" column="id" />
+        <result property="children" column="children" />
+        <result property="conId" column="con_id" />
+        <result property="comId" column="com_id" />
+        <result property="byId" column="by_id" />
+        <result property="upvote" column="upvote" />
+        <result property="commTime" column="comm_time" />
+        <result property="comContent" column="com_content" />
+        <!-- property 表示wang.dreamland.www.entity.Comment中的属性； column 表示表中的列名 -->
+        <association property="user" javaType="User">
+            <id column="uid" property="id" />
             <result column="email" property="email" />
             <result column="password" property="password" />
             <result column="nick_name" property="nickName" />

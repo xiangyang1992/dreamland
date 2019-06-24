@@ -14,7 +14,7 @@ public interface CommentMapper extends Mapper<Comment> {
     List<Comment> selectAll(@Param(value = "cid") long cid);
 
     //根据文章id查询所有一级评论
-    List<Comment> selectAllFisrtComment(@Param(value = "cid") Long cid);
+    List<Comment> selectAllFirstComment(@Param(value = "cid") Long cid);
 
     //根据文章id和二级评论ids查询所有二级评论
     List<Comment> selectAllChildrenComment(@Param(value = "cid") long cid, @Param("children") String children);

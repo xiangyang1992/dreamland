@@ -53,6 +53,9 @@ function FormatDate(strTime) {
     var s = date.getSeconds();
     if (s<10) s = '0'+s;
     return date.getFullYear()+'-'+data.getMonth()+'-'+date.getDate()+" "+h+':'+m+':'+s;
+}
 
-    
+
+function reply(id,uid) {
+    $("div").remove(""+id+"")
 }

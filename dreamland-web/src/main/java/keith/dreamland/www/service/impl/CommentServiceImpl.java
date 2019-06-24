@@ -46,7 +46,7 @@ public class CommentServiceImpl implements CommentService {
     @Override
     @Transactional
     public List<Comment> findAllFirstComment(Long content_id) {
-        return commentMapper.selectAllFisrtComment(content_id);
+        return commentMapper.selectAllFirstComment(content_id);
     }
 
     @Override

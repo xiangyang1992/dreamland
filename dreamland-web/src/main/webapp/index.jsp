@@ -70,7 +70,7 @@
     <div id="content" class="row-fluid">
         <div class="col-md-9" style="background-color: white;">
             <div id="content_col" class="content-main">
-                <c:forEach var="cont" items="${page.result}" varStatus="i">
+                <c:forEach vsar="cont" items="${page.result}" varStatus="i">
                     <!-- 正文开始 -->
                     <div class="content-text">
                         <div class="author clearfix">
@@ -105,7 +105,7 @@
                                 <span class="number hidden" id="up_${cont.id}">${cont.upvote}</span>
                             </a>
                             &nbsp;
-                            <a style="cursor: pointer;" onclick="upvote_click(${cont.id},-1);">
+                            <a style="cursor: pointer;" onclisck="upvote_click(${cont.id},-1);">
                                 <i class="icon icon-thumbs-o-down icon-2x"></i>
                                 <span class="number hidden" id="down_${cont.id}">${cont.downvote}</span>
                             </a>
