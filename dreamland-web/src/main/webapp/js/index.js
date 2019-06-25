@@ -59,17 +59,8 @@ function FormatDate(strTime) {
 function reply(id,uid) {
     $("div").remove("#comment_reply_"+id+" .comment-show");
     $("div").remove("#comment_reply_"+id+" .comment-show-con");
-
-    // $("div").remove("#comment_reply_"+id+" .comment-show");
-    // $("div").remove("#comment_reply_"+id+" .comment-show-con");
-
     if (showdiv_display = document.getElementById('comment_reply_' + id).style.display == 'none') {//如果show是隐藏的
-
         document.getElementById('comment_reply_' + id).style.display = 'block';//show的display属性设置为block（显示）
-    // var showdiv_display = document.getElementById("comment_reply_"+id).style.display;
-    // if (showdiv_display =='none') {
-    //     showdiv_display.style.display = 'block';
-    // }
         $.ajax({
             type: 'post',
             url: '/reply',
