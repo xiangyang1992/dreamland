@@ -12,7 +12,7 @@ import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+@Service(value = "commentService")
 public class CommentServiceImpl implements CommentService {
     @Autowired
     private CommentMapper commentMapper;
@@ -52,7 +52,7 @@ public class CommentServiceImpl implements CommentService {
     @Override
     @Transactional
     public List<Comment> findAllChildrenComment(Long content_id, String children) {
-        return commentMapper.selectAllChildrenComment(content_id, children);
+        return commentMapper.findAllChildrenComment(content_id, children);
     }
 
     @Override

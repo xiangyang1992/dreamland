@@ -1,12 +1,16 @@
 package keith.dreamland.www.controller;
 
 import com.sun.org.apache.xpath.internal.operations.Mod;
+import keith.dreamland.www.common.DateUtils;
 import keith.dreamland.www.common.PageHelper;
+import keith.dreamland.www.entity.Comment;
 import keith.dreamland.www.entity.Upvote;
 import keith.dreamland.www.entity.User;
 import keith.dreamland.www.entity.UserContent;
+import keith.dreamland.www.service.CommentService;
 import keith.dreamland.www.service.UpvoteService;
 import keith.dreamland.www.service.UserContentService;
+import keith.dreamland.www.service.UserService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,8 +19,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.annotation.Resource;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -29,7 +35,11 @@ public class IndexJspController extends BaseController {
     @Autowired
     private UpvoteService upvoteService;
 
+    @Resource(name = "commentService")
+    private CommentService commentService;
 
+    @Resource(name = "userService")
+    private UserService userService;
     /**
      * @param
      * @return
@@ -52,22 +62,22 @@ public class IndexJspController extends BaseController {
     }
 
     /**
+     * @param
+     * @return
      * @Author xy
      * @description 点赞和踩
      * @CreateDate
-     * @param
-     * @return
      **/
     @RequestMapping(value = "/upvote")
     @ResponseBody
-    public Map<String, Object> upvote(Model model,@RequestParam(value = "id",required = false)long id,
-                                      @RequestParam(value = "uid",required = false)long uid,
-                                      @RequestParam(value = "upvote",required = false)Integer upvote) {
+    public Map<String, Object> upvote(Model model, @RequestParam(value = "id", required = false) long id,
+                                      @RequestParam(value = "uid", required = false) long uid,
+                                      @RequestParam(value = "upvote", required = false) Integer upvote) {
         log.info("id=" + id + "uid=" + uid + "upvote=" + upvote);
         Map<String, Object> map = new HashMap<>();
         User user = (User) getSession().getAttribute("user");
         if (user == null) {
-            map.put("data","fail");
+            map.put("data", "fail");
             return map;
         }
         Upvote upvote1 = new Upvote();
@@ -96,7 +106,7 @@ public class IndexJspController extends BaseController {
         } else if (upvote == 1) {
             if (up != null) {
                 log.info(up.toString() + "----------");
-                if ("1".equals(up.getUpvote())){
+                if ("1".equals(up.getUpvote())) {
                     map.put("data", "upvote");
                     return map;
                 }
@@ -117,6 +127,71 @@ public class IndexJspController extends BaseController {
         return map;
     }
 
+    @RequestMapping(value = "/reply")
+    @ResponseBody
+    public Map<String, Object> reply(Model model, @RequestParam(value = "content_id", required = false) Long content_id) {
+        Map map = new HashMap<String ,Object>();
+        List<Comment> commentList = commentService.findAllFirstComment(content_id);
+        if (commentList != null && commentList.size() > 0) {
+            for (Comment c:commentList) {
+                List<Comment> list = commentService.findAllChildrenComment(c.getConId(),c.getChildren());
+                if (list != null && list.size() > 0) {
+                    for (Comment comm:list) {
+                        if (comm.getById() != null) {
+                            User ByUser = userService.findById(comm.getById());
+                            comm.setByUser(ByUser);
+                        }
+                    }
+                }
+                c.setComments(list);
+            }
+        }
+        map.put("list", commentList);
+        return map;
+    }
 
+
+    @RequestMapping(value = "/comment")
+    @ResponseBody
+    public Map<String ,Object> comment(Model model,@RequestParam(value = "id",required = false)Long id,
+                                       @RequestParam(value = "cont_id",required = false) Long cont_id,
+                                       @RequestParam(value = "uid",required = false)Long uid,
+                                       @RequestParam(value = "by_id",required = false)Long bid,
+                                       @RequestParam(value = "oSize",required = false)String  oSize,
+                                       @RequestParam(value = "comment_time",required = false)String comment_time,
+                                       @RequestParam(value = "upvote",required = false) Integer upvote) {
+
+        Map map = new HashMap<String ,Object>();
+        User user = (User) getSession().getAttribute("user");
+        if (user == null) {
+            map.put("data", "fail");
+            return map;
+        }
+        if (id == null) {
+            Date date = DateUtils.StringtoDate(comment_time, "yyyy-MM-dd HH:mm:ss");
+            Comment comment = new Comment();
+            comment.setComContent(oSize);
+            comment.setCommTime(date);
+            comment.setConId(cont_id);
+            comment.setComId(uid);
+            if (upvote == null) {
+                upvote = 0;
+            }
+            comment.setById(bid);
+            comment.setUpvote(upvote);
+            User u = userService.findById(uid);
+            comment.setUser(u);
+            commentService.add(comment);
+            map.put("data", comment);
+
+            UserContent userContent = userContentService.findById(cont_id);
+        } else {
+            //点赞
+            Comment c = commentService.findById(id);
+            c.setUpvote(upvote);
+            commentService.update(c);
+        }
+        return map;
+    }
 
 }

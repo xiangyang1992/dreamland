@@ -1,9 +1,13 @@
 package keith.dreamland.www.entity;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 import java.util.Date;
+import java.util.List;
 
 public class Comment {
     @Id
@@ -20,9 +24,42 @@ public class Comment {
 
     private String children;
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public User getByUser() {
+        return ByUser;
+    }
+
+    public void setByUser(User byUser) {
+        ByUser = byUser;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
+
     private Integer upvote;
 
     private String comContent;
+
+    @Transient
+    private User user;
+
+    @Transient
+    private User ByUser;
+
+    @Transient
+    private List<Comment> comments;
 
     public Long getId() {
         return id;

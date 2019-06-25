@@ -70,7 +70,7 @@
     <div id="content" class="row-fluid">
         <div class="col-md-9" style="background-color: white;">
             <div id="content_col" class="content-main">
-                <c:forEach vsar="cont" items="${page.result}" varStatus="i">
+                <c:forEach var="cont" items="${page.result}" varStatus="i">
                     <!-- 正文开始 -->
                     <div class="content-text">
                         <div class="author clearfix">
@@ -133,8 +133,8 @@
                         <div class="commentAll" style="display:none" id="comment_reply_${cont.id}">
                             <!--评论区域 begin-->
                             <div class="reviewArea clearfix">
-                                <textarea class="content comment-input" placeholder="Please enter a comment&hellip;"
-                                          onkeyup="keyUP(this)"></textarea>
+                                <textarea class="content comment-input" placeholder="评论&hellip;" id="comment_input_${cont.id}"
+                                              onkeyup="keyUP(this)"></textarea>
                                 <a class="plBtn" id="comment_${cont.id}"
                                    onclick="_comment(${cont.id},${user.id==null?0:user.id},${cont.uId})"
                                    style="color: white;cursor: pointer;">评论</a>
@@ -323,6 +323,6 @@
 <script>
     var userId = "${user.id}";
 </script>
-<script type="text/javascript" src="${ctx}/js/index.js?ver=111"></script>
+<script type="text/javascript" src="${ctx}/js/index.js?ver=<%=UUID.randomUUID()%>"></script>
 </body>
 </html>

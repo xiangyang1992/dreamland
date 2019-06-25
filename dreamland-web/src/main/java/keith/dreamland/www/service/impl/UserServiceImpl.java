@@ -12,7 +12,7 @@ import javax.annotation.Resource;
 /**
  * Created by xiangyang on 2019/3/10 0010 17:10
  */
-@Service
+@Service(value = "userService")
 public class UserServiceImpl implements UserService {
 
     @Autowired

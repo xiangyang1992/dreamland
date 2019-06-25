@@ -17,7 +17,7 @@ public interface CommentMapper extends Mapper<Comment> {
     List<Comment> selectAllFirstComment(@Param(value = "cid") Long cid);
 
     //根据文章id和二级评论ids查询所有二级评论
-    List<Comment> selectAllChildrenComment(@Param(value = "cid") long cid, @Param("children") String children);
+    List<Comment> findAllChildrenComment(@Param(value = "cid") long cid, @Param("children") String children);
 
     //插入评论并返回主键id,返回值是影响行数，id在Comment对象中
     int insertComment(Comment comment);
