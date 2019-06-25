@@ -9,8 +9,7 @@
     <bookmark url="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/RegisterController.java" line="140" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbbe6db2-b953-44a7-a617-c79b5643ce04" name="Default Changelist" comment="新增点赞，踩功能">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat.xml" />
+    <list default="true" id="fbbe6db2-b953-44a7-a617-c79b5643ce04" name="Default Changelist" comment="回复功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -591,7 +590,7 @@
       <workItem from="1561364175841" duration="612000" />
       <workItem from="1561375160842" duration="2530000" />
       <workItem from="1561425888926" duration="1751000" />
-      <workItem from="1561431994126" duration="15704000" />
+      <workItem from="1561431994126" duration="15727000" />
     </task>
     <task id="LOCAL-00001" summary="Default Changelist">
       <created>1557907701502</created>
@@ -656,7 +655,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561464202320</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="回复功能">
+      <created>1561464681126</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1561464681127</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -692,7 +698,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190270000" />
+    <option name="totallyTimeSpent" value="190293000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -797,7 +803,8 @@
     <MESSAGE value="Default Changelist" />
     <MESSAGE value="新增点赞，踩功能" />
     <MESSAGE value="新增回复功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增回复功能" />
+    <MESSAGE value="回复功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="回复功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
