@@ -3,6 +3,7 @@ package keith.dreamland.www.controller;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import keith.dreamland.www.common.DateUtils;
 import keith.dreamland.www.common.PageHelper;
+import keith.dreamland.www.common.StringUtil;
 import keith.dreamland.www.entity.Comment;
 import keith.dreamland.www.entity.Upvote;
 import keith.dreamland.www.entity.User;
@@ -11,6 +12,7 @@ import keith.dreamland.www.service.CommentService;
 import keith.dreamland.www.service.UpvoteService;
 import keith.dreamland.www.service.UserContentService;
 import keith.dreamland.www.service.UserService;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -40,6 +42,7 @@ public class IndexJspController extends BaseController {
 
     @Resource(name = "userService")
     private UserService userService;
+
     /**
      * @param
      * @return
@@ -127,16 +130,17 @@ public class IndexJspController extends BaseController {
         return map;
     }
 
+    //评论，回复
     @RequestMapping(value = "/reply")
     @ResponseBody
     public Map<String, Object> reply(Model model, @RequestParam(value = "content_id", required = false) Long content_id) {
-        Map map = new HashMap<String ,Object>();
+        Map map = new HashMap<String, Object>();
         List<Comment> commentList = commentService.findAllFirstComment(content_id);
         if (commentList != null && commentList.size() > 0) {
-            for (Comment c:commentList) {
-                List<Comment> list = commentService.findAllChildrenComment(c.getConId(),c.getChildren());
+            for (Comment c : commentList) {
+                List<Comment> list = commentService.findAllChildrenComment(c.getConId(), c.getChildren());
                 if (list != null && list.size() > 0) {
-                    for (Comment comm:list) {
+                    for (Comment comm : list) {
                         if (comm.getById() != null) {
                             User ByUser = userService.findById(comm.getById());
                             comm.setByUser(ByUser);
@@ -153,15 +157,15 @@ public class IndexJspController extends BaseController {
 
     @RequestMapping(value = "/comment")
     @ResponseBody
-    public Map<String ,Object> comment(Model model,@RequestParam(value = "id",required = false)Long id,
-                                       @RequestParam(value = "cont_id",required = false) Long cont_id,
-                                       @RequestParam(value = "uid",required = false)Long uid,
-                                       @RequestParam(value = "by_id",required = false)Long bid,
-                                       @RequestParam(value = "oSize",required = false)String  oSize,
-                                       @RequestParam(value = "comment_time",required = false)String comment_time,
-                                       @RequestParam(value = "upvote",required = false) Integer upvote) {
+    public Map<String, Object> comment(Model model, @RequestParam(value = "id", required = false) Long id,
+                                       @RequestParam(value = "cont_id", required = false) Long cont_id,
+                                       @RequestParam(value = "uid", required = false) Long uid,
+                                       @RequestParam(value = "by_id", required = false) Long bid,
+                                       @RequestParam(value = "oSize", required = false) String oSize,
+                                       @RequestParam(value = "comment_time", required = false) String comment_time,
+                                       @RequestParam(value = "upvote", required = false) Integer upvote) {
 
-        Map map = new HashMap<String ,Object>();
+        Map map = new HashMap<String, Object>();
         User user = (User) getSession().getAttribute("user");
         if (user == null) {
             map.put("data", "fail");
@@ -185,6 +189,9 @@ public class IndexJspController extends BaseController {
             map.put("data", comment);
 
             UserContent userContent = userContentService.findById(cont_id);
+            Integer num = userContent.getCommentNum();
+            userContent.setCommentNum(num + 1);
+            userContentService.updateById(userContent);
         } else {
             //点赞
             Comment c = commentService.findById(id);
@@ -194,4 +201,97 @@ public class IndexJspController extends BaseController {
         return map;
     }
 
+
+    @RequestMapping(value = "/deleteComment")
+    @ResponseBody
+    public Map<String, Object> deleteComment(Model model, @RequestParam(value = "cont_id", required = false) Long cont_id,
+                                             @RequestParam(value = "uid", required = false) Long uid,
+                                             @RequestParam(value = "id", required = false) Long id,
+                                             @RequestParam(value = "fid", required = false) Long fid) {
+        int num = 0;
+        Map map = new HashMap<String, Object>();
+        User user = (User) getSession().getAttribute("user");
+        if (user == null) {
+            map.put("data", "fail");
+        } else {
+            if (user.getId().equals(uid)) {
+                Comment comment = commentService.findById(id);
+                if (StringUtils.isBlank(comment.getChildren())) {
+                    if (fid != null) {
+                        //去掉id
+                        Comment fcomment = commentService.findById(fid);
+                        String child = StringUtil.getString(fcomment.getChildren(), id);
+                        fcomment.setChildren(child);
+                        commentService.update(fcomment);
+                    }
+                    commentService.deleteById(id);
+                    num = num + 1;
+                } else {
+                    String children = comment.getChildren();
+                    commentService.deleteChildrenComment(children);
+                    String[] arr = children.split(",");
+                    commentService.deleteById(id);
+                    num = num + arr.length + 1;
+                }
+                UserContent userContent = userContentService.findById(cont_id);
+                if (userContent != null) {
+                    if (userContent.getCommentNum() - num >= 0) {
+                        userContent.setCommentNum(userContent.getCommentNum() - num);
+                    } else {
+                        userContent.setCommentNum(0);
+                    }
+                    userContentService.updateById(userContent);
+                }
+                map.put("data", userContent != null ? userContent.getCommentNum() : null);
+            } else {
+                map.put("data", "no-access");
+            }
+        }
+        return map;
+    }
+
+    @RequestMapping(value = "/comment_pl")
+    @ResponseBody
+    public Map<String ,Object> addCommentChild(Model model,@RequestParam(value = "cont_id",required = false)Long cont_id,
+                                          @RequestParam(value = "uid",required = false)Long uid,
+                                          @RequestParam(value = "by_id",required = false)Long bid,
+                                          @RequestParam(value = "oSize",required = false)String  oSize,
+                                          @RequestParam(value = "pl_time",required = false)String comment_time,
+                                          @RequestParam(value = "id",required = false)Long id,
+                                          @RequestParam(value = "upvote",required = false)Integer upvote) {
+        Map map = new HashMap<String, Object>();
+        User user = (User) getSession().getAttribute("user");
+        if (user == null) {
+            map.put("data", "fail");
+            return map;
+        }
+        Date date = DateUtils.StringtoDate(comment_time, "yyyy-MM-dd HH:mm:ss");
+        Comment comment = new Comment();
+        comment.setConId(cont_id);
+        comment.setComContent(oSize);
+        comment.setCommTime(date);
+        comment.setComId(uid);
+        if (upvote == null) {
+            upvote = 0;
+        }
+        comment.setById(bid);
+        comment.setUpvote(upvote);
+        User u = userService.findById(uid);
+        comment.setUser(u);
+        commentService.add(comment);
+
+        Comment comm = commentService.findById(id);
+        if (StringUtils.isBlank(comm.getChildren())) {
+            comm.setChildren(comment.getId().toString());
+        } else {
+            comm.setChildren(comm.getChildren() + "," + comment.getId());
+        }
+        commentService.update(comm);
+        map.put("data", comment);
+        UserContent userContent = userContentService.findById(cont_id);
+        Integer num = userContent.getCommentNum();
+        userContent.setCommentNum(num+1);
+        userContentService.updateById(userContent);
+        return map;
+    }
 }

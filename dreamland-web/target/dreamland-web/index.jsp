@@ -16,6 +16,11 @@
     <link rel="stylesheet" href="${ctx}/css/reply/css/comment.css">
     <link rel="stylesheet" href="${ctx}/css/My_css/index.css">
 </head>
+<script>
+    var userId = "${user.id}";
+    var nickName = "${user.nickName}";
+    var userUrl  = "${user.imgUrl}";
+</script>
 <body>
 <div class="container">
     <div>
@@ -294,9 +299,9 @@
                         </p>
                         <p>
                             <span>违法和不良信息举报电话：010-xxxxxxx</span>
-                            <span>邮箱：xxx@dreamland.wang</span>
+                            <span>邮箱：xxx@dreamland.Keith</span>
                         </p>
-                        <p style="margin-top: 8px">&copy;www.dreamland.wang 梦境网版权所有</p>
+                        <p style="margin-top: 8px">&copy;www.dreamland.Keith 梦境网版权所有</p>
                     </div>
                 </div>
             </div>
@@ -320,9 +325,6 @@
 <script type="text/javascript" src="${ctx}/css/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="${ctx}/css/zui/js/zui.min.js"></script>
 <script type="text/javascript" src="${ctx}/css/reply/js/jquery.flexText.js"></script>
-<script>
-    var userId = "${user.id}";
-</script>
-<script type="text/javascript" src="${ctx}/js/index.js?ver=<%=UUID.randomUUID()%>"></script>
+<script type="text/javascript" src="${ctx}/js/index.js?<%=UUID.randomUUID()%>"></script>
 </body>
 </html>

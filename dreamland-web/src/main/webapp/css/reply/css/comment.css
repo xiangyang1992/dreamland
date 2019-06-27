@@ -84,7 +84,7 @@ img{outline: none;border: 0;}
     color: #8b8b8b;
     margin-right: 24px;
     display: block;
-    opacity: 0;
+    opacity: 1;
 }
 .hf-con-block {
     display: block;
