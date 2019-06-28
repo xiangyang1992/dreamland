@@ -6,6 +6,7 @@ import keith.dreamland.www.dao.UserContentMapper;
 import keith.dreamland.www.entity.Comment;
 import keith.dreamland.www.entity.UserContent;
 import keith.dreamland.www.service.UserContentService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -93,5 +94,24 @@ public class UserContentServiceImpl implements UserContentService {
     @Transactional
     public void updateById(UserContent content) {
         userContentMapper.updateByPrimaryKeySelective(content);
+    }
+
+    @Override
+    public List<UserContent> findCategoryByUid(Long uid) {
+        return userContentMapper.findCategoryByUid(uid);
+    }
+
+    @Override
+    public PageHelper.Page<UserContent> findByCategory(String category, Long uid, Integer pageNum, Integer pageSize) {
+        UserContent userContent = new UserContent();
+        if (!StringUtils.isBlank(category) && !"null".equals(category)) {
+            userContent.setCategory(category);
+        }
+        userContent.setuId(uid);
+        userContent.setPersonal("0");
+        PageHelper.startPage(pageNum,pageSize);//开始分页
+        userContentMapper.select(userContent);
+        PageHelper.Page endPage = PageHelper.endPage();//分页结束
+        return endPage;
     }
 }

@@ -52,4 +52,21 @@ public interface UserContentService {
      * @return
      */
     void updateById(UserContent content);
+
+    /**
+     * 根据用户id查询梦分类
+     *
+     * @param uid
+     */
+    List<UserContent> findCategoryByUid(Long uid);
+
+    /**
+     * 根据文章分类查询所有文章
+     *
+     * @param category
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    PageHelper.Page<UserContent> findByCategory(String category, Long uid, Integer pageNum, Integer pageSize);
 }

@@ -1,5 +1,6 @@
 package keith.dreamland.www.dao;
 
+import org.apache.ibatis.annotations.Param;
 import tk.mybatis.mapper.common.Mapper;
 import keith.dreamland.www.entity.UserContent;
 
@@ -10,4 +11,5 @@ import java.util.List;
  */
 public interface UserContentMapper extends Mapper<UserContent> {
 
+    List<UserContent> findCategoryByUid(@Param(value = "uid") Long uid);
 }

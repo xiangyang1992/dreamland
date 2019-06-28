@@ -64,7 +64,7 @@ public class LoginController extends BaseController {
             log.info("用户登录成功！");
             model.addAttribute("user", user);
             getSession().setAttribute("user", user);
-            return "/personal/personal";
+            return "redirect:/list";
         } else {
             log.info("用户登录失败！");
             model.addAttribute("email", email);

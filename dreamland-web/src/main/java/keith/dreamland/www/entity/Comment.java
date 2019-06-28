@@ -1,6 +1,5 @@
 package keith.dreamland.www.entity;
 
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
