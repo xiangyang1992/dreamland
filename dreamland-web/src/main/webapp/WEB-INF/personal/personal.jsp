@@ -41,7 +41,7 @@
         <div class="collapse navbar-collapse navbar-collapse-example">
             <!-- 一般导航项目 -->
             <ul class="nav navbar-nav">
-                <li class="active"><a href="your/nice/url">我的梦</a></li>
+                <li class="active"><a href="your/nice/url">我的博客</a></li>
                 <li><a href="${ctx}/index_list">首页</a></li>
 
                 <!-- 导航中的下拉菜单 -->
@@ -57,7 +57,7 @@
             </ul>
 
             <ul class="nav navbar-nav">
-                <li><a href="${ctx}/writedream?id=${user.id}">写梦</a></li>
+                <li><a href="${ctx}/writedream?id=${user.id}">写博客</a></li>
             </ul>
             <ul class="nav navbar-nav" style="margin-left: 680px">
                 <li><a href="${ctx}/list?id=${user.id}">${user.nickName}
@@ -112,7 +112,7 @@
 
 
                 <div style="width: 35px;height: 18px;background-color: #4cae4c;float: left;line-height: 15px;margin-top: 30px;margin-left: 20px">
-                    <span style="color: white;font-size: 12px">梦博</span>
+                    <span style="color: white;font-size: 12px">博客博</span>
                 </div>
                 <div style="width: 18px;height: 18px;background-color: #2b542c;float: left;line-height: 15px;margin-top: 30px;">
                     <span style="color: white;font-size: 12px">2</span>
@@ -134,16 +134,13 @@
 
     <div class="dreamland-diff">
         <div class="customer" style="height: 40px;background-color:#262626;line-height: 40px ">
-            <font color="white" size="2.8" face="黑体" style="margin-top: 10px;margin-left: 10px">梦分类</font>
+            <font color="white" size="2.8" face="黑体" style="margin-top: 10px;margin-left: 10px">博客分类</font>
         </div>
         <div class="list-group">
-            <a href="#" class="list-group-item active" id="l1">惊悚梦(10)</a>
-            <a href="#" class="list-group-item" id="l2">爱情梦(0)</a>
-            <a href="#" class="list-group-item" id="l3">武侠梦(3)</a>
-            <a href="#" class="list-group-item" id="l4">美食梦(7)</a>
-            <a href="#" class="list-group-item" id="l5">工作梦(34)</a>
-            <a href="#" class="list-group-item" id="l6">动物梦(23)</a>
-            <a href="#" class="list-group-item" id="l7">其他梦(29)</a>
+            <a onclick="changeToActive('category_x',null,null)" class="list-group-item active" id="category_x">全部(${page.total})</a>
+            <c:forEach items="${categorys}" var="catetory" varStatus="sta">
+                <a onclick="changeToActive('category_${sta.index}','${catetory.category}',null)" class="list-group-item" id="category_${sta.index}">${catetory.category}(${catetory.num})</a>
+            </c:forEach>
         </div>
     </div>
 
@@ -399,26 +396,26 @@
         <div class="content-bar">
             <div id="fa-dreamland" style="background-color: #B22222;width: 120px;text-align: center;height: 40px;line-height: 40px;float: left" onclick="release_dreamland();">
 
-                 <span id="fa-span" style="color: white">发布的梦</span>
+                 <span id="fa-span" style="color: white">发布的博客</span>
 
             </div>
 
             <div id="manage-dreamland" style="background-color: #F0F0F0;width: 120px;text-align: center;height: 40px;line-height: 40px;float: left;margin-left: 20px" onclick="manage_dreamland();">
 
-                <span id="manage-span" style="color: black">管理梦</span>
+                <span id="manage-span" style="color: black">管理博客</span>
 
             </div>
 
             <div id="personal-div" style="background-color: #F0F0F0;width: 120px;text-align: center;height: 40px;line-height: 40px;float: left;margin-left: 20px" onclick="personal_dreamland();">
 
-                <span id="personal-span"  style="color: black">私密梦</span>
+                <span id="personal-span"  style="color: black">私密博客</span>
 
             </div>
 
         </div>
 
         <div id="release-dreamland" style="height: 700px;margin-top: 50px;width: 100%">
-            <ul style="font-size: 12px">
+            <ul style="font-size: 12px" id="release-dreamland-ul">
                 <c:forEach var="cont" items="${page.result}" varStatus="i">
                 <li class="dreamland-fix">
                     <a>${cont.title}</a>
@@ -461,15 +458,13 @@
             </div>
 
         </div>
-        <div id="update-dreamland" style="height: 700px;margin-top: 50px;width: 100%;display: none" >
-            <ul style="font-size: 12px">
+        <div id="update-dreamland" style="height: 700px;margin-top: 50px;width: 100%;display: none">
+            <ul style="font-size: 12px" id="update-dreamland-ul">
                 <c:forEach var="cont" items="${page.result}" varStatus="i">
                 <li class="dreamland-fix">
                     <a>${cont.title}</a>
                     <span class="bar-delete">删除</span>
                     <span class="bar-update">修改</span>
-
-
                     <hr/>
                 </li>
                 </c:forEach>
@@ -477,8 +472,8 @@
             </ul>
 
 
-            <div style="float: left;position: absolute;bottom: 1080px;margin-left: 20px">
-                <ul class="pager pager-loose">
+            <div style="float: left;position: absolute;bottom: 1080px;margin-left: 20px" id="update-dream-div">
+                <ul class="pager pager-loose" id="udpate-dreamland-fy">
                     <c:if test="${page.pageNum <= 1}">
                         <li class="previous"><a href="javascript:void(0);">« 上一页</a></li>
                     </c:if>
@@ -505,11 +500,9 @@
 
             </div>
         </div>
-
-
         <div id="personal-dreamland" style="height: 700px;margin-top: 50px;width: 100%;display: none">
-            <ul style="font-size: 12px">
-                <c:forEach var="cont" items="${page2.result}" varStatus="i">
+            <ul style="font-size: 12px" id="personal-dreamland-ul">
+                <c:forEach var="cont" items="${page1.result}" varStatus="i">
                 <li class="dreamland-fix">
                     <a>${cont.title}</a>
                     <span class="bar-delete">删除</span>
@@ -520,8 +513,8 @@
 
             </ul>
 
-            <div style="float: left;position: absolute;bottom: 1080px;margin-left: 20px">
-            <ul class="pager pager-loose">
+            <div id="personal-dreamland-div" style="float: left;position: absolute;bottom: 1080px;margin-left: 20px">
+            <ul class="pager pager-loose" id="personal-dreamland-fy">
                 <c:if test="${page2.pageNum <= 1}">
                     <li class="previous"><a href="javascript:void(0);">« 上一页</a></li>
                 </c:if>
@@ -553,13 +546,13 @@
         </div>
 
         <div class="hot-dreamland" style="height: 1020px">
-            <div style="text-align: center;margin-top: 20px">热梦推荐
+            <div style="text-align: center;margin-top: 20px">热博客推荐
                 <span style="color:#B22222 ">hot</span>
             </div>
 
             <div style="height: 700px;margin-top: 30px;width: 100%">
                 <ul style="font-size: 12px">
-                    <c:forEach var="cont" items="${hotPage.result}" varStatus="i">
+                    <c:forEach var="cont" items="${HotPage.result}" varStatus="i">
                     <li class="dreamland-fix">
                         <a>${cont.title}</a>
                         <span class="bar-read">评论 (${cont.commentNum} )</span>
@@ -606,7 +599,7 @@
 <!--右侧-->
 
 <div class="ibx-advice" onmouseover="changeBackColor();" onmouseout="back2color();">
-    <a href="${ctx}/writedream?id=${user.id}"><span class="glyphicon glyphicon-edit" aria-hidden="true" style="color:#1b1b1b;font-size:30px;" title="写梦"></span></a>
+    <a href="${ctx}/writedream?id=${user.id}"><span class="glyphicon glyphicon-edit" aria-hidden="true" style="color:#1b1b1b;font-size:30px;" title="写博客"></span></a>
 </div>
 
 <!--底部-->
@@ -621,7 +614,7 @@
                 <ul style="color: white">
                     <li>
                         <a href="" target="_blank" rel="nofollow" style="color: white">
-                            关于梦境网
+                            关于博客境网
                         </a>
                     </li>
                     <li>
@@ -716,7 +709,7 @@
                     <span style="color: white;font-size: 12px">违法和不良信息举报电话：010-xxxxxxx</span>
                     <span style="color: white">邮箱：xxx@dreamland.wang</span>
                 </p>
-                <p style="margin-top: 8px;color: white;font-size: 12px">&copy;www.dreamland.wang 梦境网版权所有</p>
+                <p style="margin-top: 8px;color: white;font-size: 12px">&copy;www.dreamland.wang 博客境网版权所有</p>
             </div>
         </div>
     </div>
@@ -724,7 +717,5 @@
 
 
 </body>
-<script>
-
-</script>
+<script type="text/javascript" src="${ctx}/js/personal.js?ver=<%=UUID.randomUUID()%>"></script>
 </html>

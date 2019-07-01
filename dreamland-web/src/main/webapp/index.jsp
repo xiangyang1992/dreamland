@@ -7,7 +7,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>梦境网</title>
+    <title>博客境网</title>
     <link href="${ctx}/css/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="${ctx}/css/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"/>
     <link href="${ctx}/css/zui/css/zui.min.css" rel="stylesheet"/>
@@ -53,11 +53,11 @@
         </div>
         <div id="navbar-menu" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">最新梦</a></li>
-                <li><a href="#">最热梦</a></li>
-                <li><a href="#">梦诗词</a></li>
-                <li><a href="#">梦问答</a></li>
-                <li><a href="#">我的梦</a></li>
+                <li class="active"><a href="#">最新博客</a></li>
+                <li><a href="#">最热博客</a></li>
+                <li><a href="#">博客诗词</a></li>
+                <li><a href="#">博客问答</a></li>
+                <li><a href="#">我的博客</a></li>
                 <li><a href="${ctx}/list?id=${user.id}">个人空间</a></li>
             </ul>
         </div>
@@ -201,7 +201,7 @@
                         <ul>
                             <li>
                                 <a href="#" target="_blank" rel="nofollow">
-                                    关于梦境
+                                    关于博客境
                                 </a>
                             </li>
                             <li>
@@ -301,7 +301,7 @@
                             <span>违法和不良信息举报电话：010-xxxxxxx</span>
                             <span>邮箱：xxx@dreamland.Keith</span>
                         </p>
-                        <p style="margin-top: 8px">&copy;www.dreamland.Keith 梦境网版权所有</p>
+                        <p style="margin-top: 8px">&copy;www.dreamland.Keith 博客境网版权所有</p>
                     </div>
                 </div>
             </div>

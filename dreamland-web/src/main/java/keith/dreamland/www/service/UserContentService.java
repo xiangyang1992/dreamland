@@ -69,4 +69,13 @@ public interface UserContentService {
      * @return
      */
     PageHelper.Page<UserContent> findByCategory(String category, Long uid, Integer pageNum, Integer pageSize);
+
+    /**
+     * 根据用户id查询所有私密博客
+     * @param id
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    PageHelper.Page<UserContent> findPersonal(Long id, Integer pageNum, Integer pageSize);
 }
