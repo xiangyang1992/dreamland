@@ -7,7 +7,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>博客境网</title>
+    <title>梦境网</title>
     <link href="${ctx}/css/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="${ctx}/css/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"/>
     <link href="${ctx}/css/zui/css/zui.min.css" rel="stylesheet"/>

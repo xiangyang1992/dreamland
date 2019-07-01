@@ -61,11 +61,7 @@ public class UserContentServiceImpl implements UserContentService {
         return endPage;
     }
 
-    @Override
-    @Transactional
-    public void addContent(UserContent content) {
-        userContentMapper.insert(content);
-    }
+
 
     @Override
     @Transactional
@@ -124,6 +120,11 @@ public class UserContentServiceImpl implements UserContentService {
         userContentMapper.select(userContent);
         PageHelper.Page endPage = PageHelper.endPage();
         return endPage;
+    }
+
+    @Override
+    public int addContent(UserContent userContent) {
+        return userContentMapper.insertContent(userContent);
     }
 
 }

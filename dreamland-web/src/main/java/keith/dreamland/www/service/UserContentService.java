@@ -22,12 +22,6 @@ public interface UserContentService {
     PageHelper.Page<UserContent> findAllByUpvote(UserContent content, Integer pageNum, Integer pageSize);
 
     /**
-     * 添加文章
-     * @param content
-     */
-    void addContent(UserContent content);
-
-    /**
      * 根据用户id查询文章集合
      * @param uid
      * @return
@@ -72,10 +66,20 @@ public interface UserContentService {
 
     /**
      * 根据用户id查询所有私密博客
+     *
      * @param id
      * @param pageNum
      * @param pageSize
      * @return
      */
     PageHelper.Page<UserContent> findPersonal(Long id, Integer pageNum, Integer pageSize);
+
+    /**
+     * 添加文章
+     *
+     * @param content
+     * @param
+     * @return
+     */
+    int addContent(UserContent userContent);
 }
