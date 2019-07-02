@@ -1,6 +1,8 @@
 package keith.dreamland.www.entity;
 
 
+import keith.dreamland.www.common.DateUtils;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -33,6 +35,7 @@ public class UserContent {
     private Integer commentNum;
 
     private String content;
+
 
     @Transient
     private Integer num;
@@ -139,5 +142,10 @@ public class UserContent {
 
     public void setContent(String content) {
         this.content = content == null ? null : content.trim();
+    }
+
+    @Transient
+    public String getFormData() {
+        return DateUtils.formatDate(getRptTime(), "yyyy-MM-dd HH:mm:ss");
     }
 }

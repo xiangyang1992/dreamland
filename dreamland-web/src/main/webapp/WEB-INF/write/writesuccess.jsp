@@ -29,11 +29,11 @@
 </head>
 <body>
 <div class="content" style="text-align: center">
-   <i class="icon-1x icon-check-circle-o" style="color: green"></i> <font size="4">梦发布成功</font>
+   <i class="icon-1x icon-check-circle-o" style="color: green"></i> <font size="4">博客发布成功</font>
     <div style="margin-left: 60px">
-        <button class="btn btn-block " id="new-dreamland" type="button" style="width: 140px;text-align: center;float: left;margin-top: 40px;background-color: #affbb2">写新梦</button>
-        <button class="btn btn-block " id="manage-dreamland" type="button" style="width: 140px;text-align: center;margin-left: 10px;float: left;margin-top: 40px;background-color: #affbb2">管理梦</button>
-        <button class="btn btn-block " id="watch-dreamland" type="button" style="width: 140px;text-align: center;margin-left: 10px;float: left;margin-top: 40px;background-color: #affbb2">查看梦</button>
+        <button class="btn btn-block " id="new-dreamland" type="button" style="width: 140px;text-align: center;float: left;margin-top: 40px;background-color: #affbb2">写新博客</button>
+        <button class="btn btn-block " id="manage-dreamland" type="button" style="width: 140px;text-align: center;margin-left: 10px;float: left;margin-top: 40px;background-color: #affbb2">管理博客</button>
+        <button class="btn btn-block " id="watch-dreamland" type="button" style="width: 140px;text-align: center;margin-left: 10px;float: left;margin-top: 40px;background-color: #affbb2">查看博客</button>
     </div>
 </div>
 </body>
@@ -50,7 +50,7 @@
 
     //查看梦
     $("#watch-dreamland").click(function () {
-        location.href ="${ctx}/watch?cid=${content.id}"
+        location.href ="${ctx}/watch?cid=${cont.id}"
     });
 </script>
 </html>

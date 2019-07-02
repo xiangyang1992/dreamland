@@ -21,6 +21,10 @@
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script>
+        var val = "${manage}";
+        var num = "${categorys.size()}"
+    </script>
 </head>
 <body>
 <nav class="navbar navbar-inverse" role="navigation">
@@ -144,7 +148,7 @@
         </div>
     </div>
 
-    <div class="dreamland-see">
+    <div class="dreamland-see" id="dreamland-see" style="margin-top: 510px">
         <div class="customer" style="height: 40px;background-color:#262626;line-height: 40px ">
             <font color="white" size="2.8" face="黑体" style="margin-top: 10px;margin-left: 10px">关注(8人)</font>
         </div>
@@ -207,34 +211,6 @@
         </div>
 
 
-        <div class="author clearfix" style="margin-left: 10px">
-            <div>
-                <a href="/users/31123326/" target="_blank" rel="nofollow" style="height: 50px" onclick="">
-                     <img src="${ctx}/images/icon_m.jpg">
-                </a>
-            </div>
-            <a href="/users/31123326/" target="_blank" onclick="" >
-                <h2 class="author-h2">
-                    白龙马
-                </h2>
-            </a>
-
-        </div>
-
-        <div class="author clearfix" style="margin-left: 10px">
-            <div>
-                <a href="/users/31123326/" target="_blank" rel="nofollow" style="height: 50px" onclick="">
-                     <img src="images/icon_m.jpg" >
-                </a>
-            </div>
-            <a href="/users/31123326/" target="_blank" onclick="">
-                <h2 class="author-h2">
-                    小黑
-                </h2>
-            </a>
-
-        </div>
-
 
         <div class="author clearfix" style="margin-left: 10px">
             <div>
@@ -285,108 +261,6 @@
             </a>
 
         </div>
-
-        <div class="author clearfix" style="margin-left: 10px">
-            <div>
-                <a href="/users/31123326/" target="_blank" rel="nofollow" style="height: 50px" onclick="">
-                     <img src="images/icon_m.jpg" >
-                </a>
-            </div>
-            <a href="/users/31123326/" target="_blank" onclick="">
-                <h2 class="author-h2">
-                    小黑
-                </h2>
-            </a>
-
-        </div>
-
-
-        <div class="author clearfix" style="margin-left: 10px">
-            <div>
-                <a href="/users/31123326/" target="_blank" rel="nofollow" style="height: 50px" onclick="">
-                     <img src="images/icon_m.jpg">
-                </a>
-            </div>
-            <a href="/users/31123326/" target="_blank" onclick="" >
-                <h2 class="author-h2">
-                    白龙马
-                </h2>
-            </a>
-
-        </div>
-
-        <div class="author clearfix" style="margin-left: 10px">
-            <div>
-                <a href="/users/31123326/" target="_blank" rel="nofollow" style="height: 50px" onclick="">
-                     <img src="images/icon_m.jpg" >
-                </a>
-            </div>
-            <a href="/users/31123326/" target="_blank" onclick="">
-                <h2 class="author-h2">
-                    小黑
-                </h2>
-            </a>
-
-        </div>
-
-
-        <div class="author clearfix" style="margin-left: 10px">
-            <div>
-                <a href="/users/31123326/" target="_blank" rel="nofollow" style="height: 50px" onclick="">
-                     <img src="images/icon_m.jpg">
-                </a>
-            </div>
-            <a href="/users/31123326/" target="_blank" onclick="" >
-                <h2 class="author-h2">
-                    白龙马
-                </h2>
-            </a>
-
-        </div>
-
-        <div class="author clearfix" style="margin-left: 10px">
-            <div>
-                <a href="/users/31123326/" target="_blank" rel="nofollow" style="height: 50px" onclick="">
-                     <img src="images/icon_m.jpg" >
-                </a>
-            </div>
-            <a href="/users/31123326/" target="_blank" onclick="">
-                <h2 class="author-h2">
-                    小黑
-                </h2>
-            </a>
-
-        </div>
-
-
-        <div class="author clearfix" style="margin-left: 10px">
-            <div>
-                <a href="/users/31123326/" target="_blank" rel="nofollow" style="height: 50px" onclick="">
-                     <img src="images/icon_m.jpg">
-                </a>
-            </div>
-            <a href="/users/31123326/" target="_blank" onclick="" >
-                <h2 class="author-h2">
-                    白龙马
-                </h2>
-            </a>
-
-        </div>
-
-        <div class="author clearfix" style="margin-left: 10px">
-            <div>
-                <a href="/users/31123326/" target="_blank" rel="nofollow" style="height: 50px" onclick="">
-                     <img src="images/icon_m.jpg" >
-                </a>
-            </div>
-            <a href="/users/31123326/" target="_blank" onclick="">
-                <h2 class="author-h2">
-                    小黑
-                </h2>
-            </a>
-
-        </div>
-
     </div>
 
 </div>
@@ -418,7 +292,7 @@
             <ul style="font-size: 12px" id="release-dreamland-ul">
                 <c:forEach var="cont" items="${page.result}" varStatus="i">
                 <li class="dreamland-fix">
-                    <a>${cont.title}</a>
+                    <a href="${ctx}/watch?cid=${cont.id}">${cont.title}</a>
                     <span class="bar-read">评论 (${cont.commentNum})</span>
                     <span class="bar-commend">${cont.upvote}人阅读</span>
 
@@ -462,9 +336,9 @@
             <ul style="font-size: 12px" id="update-dreamland-ul">
                 <c:forEach var="cont" items="${page.result}" varStatus="i">
                 <li class="dreamland-fix">
-                    <a>${cont.title}</a>
-                    <span class="bar-delete">删除</span>
-                    <span class="bar-update">修改</span>
+                    <a href="${ctx}/watch?cid=${cont.id}">${cont.title}</a>
+                    <a href="${ctx}/deleteContent?cid=${cont.id}"><span class="bar-delete" >删除</span></a>
+                    <a href="${ctx}/writedream?cid=${cont.id}"><span class="bar-update" >修改</span></a>
                     <hr/>
                 </li>
                 </c:forEach>
@@ -480,7 +354,7 @@
                     <c:if test="${page.pageNum > 1}">
                         <li class="previous"><a href="${ctx}/list?pageNum=${page.pageNum-1}&&id=${user.id}">« 上一页</a></li>
                     </c:if>
-                    <c:forEach begin="1" end="${page.pages}" var="pn">
+                    <c:forEach begin="${page.startPage}" end="${page.endPage}" var="pn">
                         <c:if test="${page.pageNum==pn}">
                             <li class="active"><a href="javascript:void(0);">${pn}</a></li>
                         </c:if>
@@ -504,9 +378,9 @@
             <ul style="font-size: 12px" id="personal-dreamland-ul">
                 <c:forEach var="cont" items="${page1.result}" varStatus="i">
                 <li class="dreamland-fix">
-                    <a>${cont.title}</a>
-                    <span class="bar-delete">删除</span>
-                    <span class="bar-update">修改</span>
+                    <a href="${ctx}/watch?cid=${cont.id}">${cont.title}</a>
+                    <a href="${ctx}/deleteContent?cid=${cont.id}"><span class="bar-delete" >删除</span></a>
+                    <a href="${ctx}/writedream?cid=${cont.id}"><span class="bar-update" >修改</span></a>
                     <hr/>
                 </li>
                 </c:forEach>
@@ -555,7 +429,7 @@
                     <c:forEach var="cont" items="${HotPage.result}" varStatus="i">
                     <li class="dreamland-fix">
                         <a>${cont.title}</a>
-                        <span class="bar-read">评论 (${cont.commentNum} )</span>
+                        <span class="bar-read">评论(${cont.commentNum} )</span>
                         <span class="bar-commend">${cont.upvote}人阅读</span>
 
 
@@ -614,7 +488,7 @@
                 <ul style="color: white">
                     <li>
                         <a href="" target="_blank" rel="nofollow" style="color: white">
-                            关于博客境网
+                            关于梦境网
                         </a>
                     </li>
                     <li>
@@ -717,5 +591,6 @@
 
 
 </body>
-<script type="text/javascript" src="${ctx}/js/personal.js?ver=<%=UUID.randomUUID()%>"></script>
+<script type="text/javascript" src="${ctx}/js/personal.js?ver=<%=UUID.randomUUID()%>">
+</script>
 </html>

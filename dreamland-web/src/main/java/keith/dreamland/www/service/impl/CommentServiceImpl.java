@@ -76,4 +76,9 @@ public class CommentServiceImpl implements CommentService {
         criteria.andIn("id", list);
         commentMapper.deleteByExample(e);
     }
+
+    @Override
+    public void deleteByContentId(Long cid) {
+        commentMapper.deleteByPrimaryKey(cid);
+    }
 }

@@ -233,3 +233,15 @@ function personTurnPage(pageNum) {
         }
     });
 }
+
+//页面加载完成函数
+$(function () {
+    var tomVal = document.getElementById("dreamland-see").style.marginTop;
+    var hgt = parseInt(num) * 40 + parseInt(tomVal.split("px")[0]);
+    document.getElementById("dreamland-see").style.marginTop = hgt + "px";
+
+
+    if (val =="manage") {
+        manage_dreamland();
+    }
+});

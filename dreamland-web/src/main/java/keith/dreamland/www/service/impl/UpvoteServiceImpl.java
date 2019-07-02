@@ -35,4 +35,9 @@ public class UpvoteServiceImpl implements UpvoteService {
     public void update(Upvote upvote) {
         upvoteMapper.updateByPrimaryKey(upvote);
     }
+
+    @Override
+    public void deleteByContentId(Long cid) {
+        upvoteMapper.deleteByPrimaryKey(cid);
+    }
 }

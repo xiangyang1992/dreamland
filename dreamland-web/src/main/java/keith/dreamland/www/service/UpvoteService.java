@@ -32,4 +32,9 @@ public interface UpvoteService {
      * @param upvote
      */
    void update(Upvote upvote);
+
+    /**
+     * 根据文章id删除清空点赞数
+     */
+    void deleteByContentId(Long cid);
 }

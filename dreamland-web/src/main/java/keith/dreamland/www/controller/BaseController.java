@@ -69,8 +69,8 @@ public class BaseController {
         return page;
     }
 
-    public PageHelper.Page<UserContent> findAll(UserContent content, Comment comment, Integer pageNum, Integer pageSize){
-        PageHelper.Page<UserContent> page = userContentService.findAll( content,comment,pageNum ,pageSize);
+    public PageHelper.Page<UserContent> findAll(Integer pageNum, Integer pageSize){
+        PageHelper.Page<UserContent> page = userContentService.findAll(pageNum, pageSize);
         return page;
     }
 

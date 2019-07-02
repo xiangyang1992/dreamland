@@ -4,7 +4,10 @@ import com.sun.org.apache.xpath.internal.operations.Mod;
 import keith.dreamland.www.common.PageHelper;
 import keith.dreamland.www.entity.User;
 import keith.dreamland.www.entity.UserContent;
+import keith.dreamland.www.service.CommentService;
+import keith.dreamland.www.service.UpvoteService;
 import keith.dreamland.www.service.UserContentService;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,6 +26,11 @@ public class PersonalController extends BaseController {
 
     @Autowired
     private UserContentService userContentService;
+    @Autowired
+    private CommentService commentService;
+
+    @Autowired
+    private UpvoteService upvoteService;
 
     /**
      * @param
@@ -34,7 +42,11 @@ public class PersonalController extends BaseController {
     @RequestMapping(value = "/list")
     public String findList(Model model, @RequestParam(value = "id", required = false) Long id,
                            @RequestParam(value = "pageNum", required = false) Integer pageNum,
-                           @RequestParam(value = "pageSize", required = false) Integer pageSize) {
+                           @RequestParam(value = "pageSize", required = false) Integer pageSize,
+                           @RequestParam(value = "manage",required = false)String manage) {
+        if (StringUtils.isNotBlank(manage)) {
+            model.addAttribute("manage", manage);
+        }
         User user = (User) getSession().getAttribute("user");
         UserContent userContent = new UserContent();
         UserContent uc = new UserContent();
@@ -52,7 +64,7 @@ public class PersonalController extends BaseController {
         //发布的博客，不含私密博客
         userContent.setPersonal("0");
         //默认每页显示4篇
-        pageSize = 8;
+        pageSize = 5;
         PageHelper.Page<UserContent> page = findAll(userContent, pageNum, pageSize);
         model.addAttribute("page", page);
 
@@ -63,6 +75,7 @@ public class PersonalController extends BaseController {
 
         //查询热博客
         UserContent userContent1 = new UserContent();
+        userContent1.setuId(user.getId());
         userContent1.setPersonal("0");
         PageHelper.Page<UserContent> HotPage = findAllByUpvote(userContent1, pageNum, pageSize);
         model.addAttribute("HotPage", HotPage);
@@ -80,7 +93,7 @@ public class PersonalController extends BaseController {
             map.put("pageCate", "fail");
             return map;
         }
-        pageSize = 8;//默认每页显示4篇
+        pageSize = 5;//默认每页显示4篇
         PageHelper.Page<UserContent> pageCate = userContentService.findByCategory(category, user.getId(), pageNum, pageSize);
         map.put("pageCate", pageCate);
         return map;
@@ -97,9 +110,21 @@ public class PersonalController extends BaseController {
             map.put("page2", "fail");
             return map;
         }
-        pageSize = 8;
+        pageSize = 5;
         PageHelper.Page<UserContent> page = userContentService.findPersonal(user.getId(), pageNum, pageSize);
         map.put("page2", page);
         return map;
+    }
+
+    @RequestMapping(value = "/deleteContent")
+    public String  deleteContent(Model model, @RequestParam(value = "cid", required = false) Long cid) {
+        User user = (User) getSession().getAttribute("user");
+        if (user == null) {
+            return "../login";
+        }
+        commentService.deleteByContentId(cid);
+        upvoteService.deleteByContentId(cid);
+        userContentService.deleteById(cid);
+        return "redirect:/list?manage=manage";
     }
 }

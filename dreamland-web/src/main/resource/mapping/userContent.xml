@@ -15,7 +15,7 @@
 
 
     <insert id="insertContent" parameterType="userContent" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO user_content(id,u_id,category.content,personal,rpt_time,img_url,nick_name,upvote,downvote,content_num)
-                VALUES (#{id}, #{uId},#{title}, #{category},#{content},#{personal},#{rptTime}, #{imgUrl},#{nickName},#{upvote},#{downvote},#{commentNum})
+        INSERT INTO user_content(id,u_id,title,category,content,personal,rpt_time,img_url,nick_name,upvote,downvote,comment_num)
+                VALUES (#{id},#{uId},#{title},#{category},#{content},#{personal},#{rptTime},#{imgUrl},#{nickName},#{upvote},#{downvote},#{commentNum})
     </insert>
 </mapper>

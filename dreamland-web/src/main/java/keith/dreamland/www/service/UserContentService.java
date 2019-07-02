@@ -18,7 +18,9 @@ public interface UserContentService {
      * @return
      */
     PageHelper.Page<UserContent> findAll(UserContent content, Integer pageNum, Integer pageSize);
-    PageHelper.Page<UserContent> findAll(UserContent content, Comment comment, Integer pageNum, Integer pageSize);
+
+    PageHelper.Page<UserContent> findAll(Integer pageNum, Integer pageSize);
+
     PageHelper.Page<UserContent> findAllByUpvote(UserContent content, Integer pageNum, Integer pageSize);
 
     /**
@@ -82,4 +84,9 @@ public interface UserContentService {
      * @return
      */
     int addContent(UserContent userContent);
+
+    /**
+     * 根据文章id删除文章
+     */
+    void deleteById(Long cid);
 }

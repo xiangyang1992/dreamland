@@ -16,4 +16,13 @@ public class DateUtils {
         }
         return date;
     }
+
+    public static String formatDate(Date rptTime, String s) {
+        if (rptTime == null) {
+            return null;
+        }
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(s);
+        String date = simpleDateFormat.format(rptTime);
+        return date;
+    }
 }

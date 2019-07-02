@@ -37,17 +37,13 @@ public class UserContentServiceImpl implements UserContentService {
     }
 
     @Override
-    @Transactional
-    public PageHelper.Page<UserContent> findAll(UserContent content, Comment comment, Integer pageNum, Integer pageSize) {
-        //分页查询
-        System.out.println("第" + pageNum + "页");
-        System.out.println("每页显示" + pageSize + "条");
+    public PageHelper.Page<UserContent> findAll(Integer pageNum, Integer pageSize) {
         PageHelper.startPage(pageNum, pageSize);
-        List<UserContent> lists = userContentMapper.select(content);
-        List<Comment> comments = commentMapper.select(comment);
-        PageHelper.Page endpage = PageHelper.endPage();//分页查询结束
-        List<UserContent> result = endpage.getResult();
-        return endpage;
+        Example e = new Example(UserContent.class);
+        e.setOrderByClause("rpt_time DESC");
+        List<UserContent> list = userContentMapper.selectByExample(e);
+        PageHelper.Page endPage = PageHelper.endPage();
+        return endPage;
     }
 
     @Override
@@ -125,6 +121,11 @@ public class UserContentServiceImpl implements UserContentService {
     @Override
     public int addContent(UserContent userContent) {
         return userContentMapper.insertContent(userContent);
+    }
+
+    @Override
+    public void deleteById(Long cid) {
+        userContentMapper.deleteByPrimaryKey(cid);
     }
 
 }

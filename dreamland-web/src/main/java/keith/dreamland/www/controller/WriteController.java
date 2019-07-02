@@ -10,7 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
@@ -23,50 +23,78 @@ public class WriteController extends BaseController {
     private UserContentService userContentService;
 
     @RequestMapping(value = "/writedream")
-    public String WriteDream(Model model) {
+    public String WriteDream(Model model,@RequestParam(value = "cid",required = false)Long id) {
         User user = (User) getSession().getAttribute("user");
+        if (id != null) {
+            UserContent userContent = userContentService.findById(id);
+            model.addAttribute("cont", userContent);
+        }
         model.addAttribute("user", user);
         return "write/writedream";
     }
 
 
     @RequestMapping(value = "/doWritedream")
-    @ResponseBody
-    public String  doWritedream(Model model, HttpServletRequest request) {
+    public String doWritedream(Model model, HttpServletRequest request,@RequestParam(value = "cid",required = false)Long cid) {
         String id = getRequest().getParameter("id");
         String category = getRequest().getParameter("category");
         String txtTitle = getRequest().getParameter("txtT_itle");
         String content = getRequest().getParameter("content");
         String private_dream = getRequest().getParameter("private_dream");
+        log.info("---进入写博客Controller---");
         User user = (User) getSession().getAttribute("user");
         if (user == null) {
-           //未登陆
+            //未登陆
             model.addAttribute("error", "请先登陆!");
             return "../login";
         }
         UserContent userContent = new UserContent();
-        userContent.setCategory(category);
-        userContent.setContent(content);
-        userContent.setRptTime(new Date());
-        userContent.setTitle(txtTitle);
+        if(cid!=null){
+            userContent = userContentService.findById(cid);
+        }
+        userContent.setCategory( category );
+        userContent.setContent( content );
+        userContent.setRptTime( new Date( ) );
         String imgUrl = user.getImgUrl();
-        if (StringUtils.isEmpty(imgUrl)) {
-            userContent.setImgUrl("/images/icon_m.jpg");
-        } else {
-            userContent.setImgUrl(imgUrl);
+        if(StringUtils.isEmpty( imgUrl )){
+            userContent.setImgUrl( "/images/icon_m.jpg" );
+        }else {
+            userContent.setImgUrl( imgUrl );
         }
-        if ("on".equals(private_dream)) {
-            userContent.setPersonal("1");
-        } else {
-            userContent.setPersonal("0");
+        if("on".equals( private_dream )){
+            userContent.setPersonal( "1" );
+        }else{
+            userContent.setPersonal( "0" );
         }
-        userContent.setUpvote(0);
-        userContent.setDownvote(0);
-        userContent.setCommentNum(0);
-        userContent.setuId(user.getId());
-        userContent.setNickName(user.getNickName());
-        userContentService.addContent(userContent);
+        userContent.setTitle( txtTitle );
+        userContent.setuId( user.getId() );
+        userContent.setNickName( user.getNickName() );
+
+        if(cid ==null){
+            userContent.setUpvote( 0 );
+            userContent.setDownvote( 0 );
+            userContent.setCommentNum( 0 );
+            userContentService.addContent( userContent );
+        }else {
+            userContentService.updateById(userContent);
+        }
+        model.addAttribute("cont",userContent);
         return "write/writesuccess";
+    }
+
+
+    @RequestMapping(value = "/watch")
+    public String watch(Model model, HttpServletRequest request,@RequestParam(value = "cid")Long cid) {
+        User user = (User) getSession().getAttribute("user");
+        if (user == null) {
+            return "../login";
+        } else {
+            model.addAttribute("user", user);
+            UserContent userContent = userContentService.findById(cid);
+            model.addAttribute("cont", userContent);
+            return "personal/watch";
+        }
+
     }
 
 }
