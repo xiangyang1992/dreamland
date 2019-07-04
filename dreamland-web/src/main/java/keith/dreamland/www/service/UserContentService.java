@@ -23,6 +23,8 @@ public interface UserContentService {
 
     PageHelper.Page<UserContent> findAllByUpvote(UserContent content, Integer pageNum, Integer pageSize);
 
+    PageHelper.Page<UserContent> findByUpvote(Long uid,Integer pageNum,Integer pageSize);
+
     /**
      * 根据用户id查询文章集合
      * @param uid

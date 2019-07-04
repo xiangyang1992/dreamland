@@ -4,6 +4,7 @@ import keith.dreamland.www.common.PageHelper;
 import keith.dreamland.www.dao.CommentMapper;
 import keith.dreamland.www.dao.UserContentMapper;
 import keith.dreamland.www.entity.Comment;
+import keith.dreamland.www.entity.User;
 import keith.dreamland.www.entity.UserContent;
 import keith.dreamland.www.service.UserContentService;
 import org.apache.commons.lang3.StringUtils;
@@ -30,7 +31,7 @@ public class UserContentServiceImpl implements UserContentService {
         System.out.println("第" + pageNum + "页");
         System.out.println("每页显示" + pageSize + "条");
         PageHelper.startPage(pageNum, pageSize);//分页查询开始
-        List<UserContent> list = userContentMapper.select(content);
+        List<UserContent> list = userContentMapper.findByJoin(content);
         PageHelper.Page endPage = PageHelper.endPage();//分页查询结束
         List<UserContent> result = endPage.getResult();
         return endPage;
@@ -39,9 +40,9 @@ public class UserContentServiceImpl implements UserContentService {
     @Override
     public PageHelper.Page<UserContent> findAll(Integer pageNum, Integer pageSize) {
         PageHelper.startPage(pageNum, pageSize);
-        Example e = new Example(UserContent.class);
-        e.setOrderByClause("rpt_time DESC");
-        List<UserContent> list = userContentMapper.selectByExample(e);
+//        Example e = new Example(UserContent.class);
+//        e.setOrderByClause("rpt_time DESC");
+        List<UserContent> list = userContentMapper.findByJoin(null);
         PageHelper.Page endPage = PageHelper.endPage();
         return endPage;
     }
@@ -57,6 +58,15 @@ public class UserContentServiceImpl implements UserContentService {
         return endPage;
     }
 
+    @Override
+    public PageHelper.Page<UserContent> findByUpvote(Long uid,Integer pageNum,Integer pageSize) {
+//        UserContent userContent = new UserContent();
+//        userContent.setuId(uid);
+        PageHelper.startPage(pageNum, pageSize);
+        userContentMapper.findHotPage(uid);
+        PageHelper.Page endPage = PageHelper.endPage();
+        return endPage;
+    }
 
 
     @Override
@@ -71,7 +81,7 @@ public class UserContentServiceImpl implements UserContentService {
     @Override
     @Transactional
     public List<UserContent> findAll() {
-        return userContentMapper.select(null);
+        return userContentMapper.findByJoin(null);
     }
 
     @Override

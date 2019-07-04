@@ -3,6 +3,8 @@ package keith.dreamland.www.entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class UserInfo {
@@ -76,5 +78,11 @@ public class UserInfo {
 
     public void setAddress(String address) {
         this.address = address == null ? null : address.trim();
+    }
+
+    @Transient
+    public String getFormateBirthday() {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        return simpleDateFormat.format(birthday);
     }
 }

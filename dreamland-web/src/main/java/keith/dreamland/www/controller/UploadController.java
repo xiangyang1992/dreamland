@@ -32,7 +32,7 @@ import java.util.*;
 public class UploadController {
     private final static Logger log = Logger.getLogger(UploadController.class);
 
-     @RequestMapping(value = "/fileUpload")
+    @RequestMapping(value = "/fileUpload")
      @ResponseBody
       public Map<String, Object> fileUpload(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException,
              FileUploadException {

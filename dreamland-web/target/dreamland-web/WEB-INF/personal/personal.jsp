@@ -131,7 +131,7 @@
             </div>
 
             <div style="float: left;margin-top: 40px; margin-left: 130px;">
-                <a href="${ctx}/profile?id=${user.id}"><i class="icon icon-edit"></i><span style="margin-left: 10px">修改个人资料</span></a>
+                <a href="${ctx}/profile?id=${user.id}"><i class="icon icon-edit"></i><span style="margin-left: 10px;text-decoration: none">修改个人资料</span></a>
             </div>
         </div>
     </div>
@@ -428,7 +428,7 @@
                 <ul style="font-size: 12px">
                     <c:forEach var="cont" items="${HotPage.result}" varStatus="i">
                     <li class="dreamland-fix">
-                        <a>${cont.title}</a>
+                        <a href="${ctx}/watch?cid=${cont.id}">${cont.title}</a>
                         <span class="bar-read">评论(${cont.commentNum} )</span>
                         <span class="bar-commend">${cont.upvote}人阅读</span>
 

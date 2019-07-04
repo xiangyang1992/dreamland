@@ -111,7 +111,7 @@
                                 <span class="number hidden" id="up_${cont.id}">${cont.upvote}</span>
                             </a>
                             &nbsp;
-                            <a style="cursor: pointer;" onclisck="upvote_click(${cont.id},-1);">
+                            <a style="cursor: pointer;" onclick="upvote_click(${cont.id},-1);">
                                 <i class="icon icon-thumbs-o-down icon-2x"></i>
                                 <span class="number hidden" id="down_${cont.id}">${cont.downvote}</span>
                             </a>

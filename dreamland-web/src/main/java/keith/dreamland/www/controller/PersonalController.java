@@ -4,18 +4,20 @@ import com.sun.org.apache.xpath.internal.operations.Mod;
 import keith.dreamland.www.common.PageHelper;
 import keith.dreamland.www.entity.User;
 import keith.dreamland.www.entity.UserContent;
-import keith.dreamland.www.service.CommentService;
-import keith.dreamland.www.service.UpvoteService;
-import keith.dreamland.www.service.UserContentService;
+import keith.dreamland.www.entity.UserInfo;
+import keith.dreamland.www.service.*;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
+import org.omg.CORBA.PUBLIC_MEMBER;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import sun.rmi.runtime.Log;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -32,6 +34,11 @@ public class PersonalController extends BaseController {
     @Autowired
     private UpvoteService upvoteService;
 
+    @Autowired
+    private UserInfoService userInfoService;
+
+    @Autowired
+    private UserService userService;
     /**
      * @param
      * @return
@@ -43,7 +50,7 @@ public class PersonalController extends BaseController {
     public String findList(Model model, @RequestParam(value = "id", required = false) Long id,
                            @RequestParam(value = "pageNum", required = false) Integer pageNum,
                            @RequestParam(value = "pageSize", required = false) Integer pageSize,
-                           @RequestParam(value = "manage",required = false)String manage) {
+                           @RequestParam(value = "manage", required = false) String manage) {
         if (StringUtils.isNotBlank(manage)) {
             model.addAttribute("manage", manage);
         }
@@ -74,10 +81,7 @@ public class PersonalController extends BaseController {
         model.addAttribute("page1", page1);
 
         //查询热博客
-        UserContent userContent1 = new UserContent();
-        userContent1.setuId(user.getId());
-        userContent1.setPersonal("0");
-        PageHelper.Page<UserContent> HotPage = findAllByUpvote(userContent1, pageNum, pageSize);
+        PageHelper.Page<UserContent> HotPage = userContentService.findByUpvote(user.getId(), pageNum, pageSize);
         model.addAttribute("HotPage", HotPage);
         return "personal/personal";
     }
@@ -101,8 +105,8 @@ public class PersonalController extends BaseController {
 
     @RequestMapping(value = "/findPersonal")
     @ResponseBody
-    public Map<String, Object> findPersonal(Model model, @RequestParam(value = "pageNum", required = false)Integer pageNum,
-                                            @RequestParam(value = "pageSize",required = false)Integer pageSize) {
+    public Map<String, Object> findPersonal(Model model, @RequestParam(value = "pageNum", required = false) Integer pageNum,
+                                            @RequestParam(value = "pageSize", required = false) Integer pageSize) {
 
         Map map = new HashMap<String, Object>();
         User user = (User) getSession().getAttribute("user");
@@ -117,7 +121,7 @@ public class PersonalController extends BaseController {
     }
 
     @RequestMapping(value = "/deleteContent")
-    public String  deleteContent(Model model, @RequestParam(value = "cid", required = false) Long cid) {
+    public String deleteContent(Model model, @RequestParam(value = "cid", required = false) Long cid) {
         User user = (User) getSession().getAttribute("user");
         if (user == null) {
             return "../login";
@@ -126,5 +130,35 @@ public class PersonalController extends BaseController {
         upvoteService.deleteByContentId(cid);
         userContentService.deleteById(cid);
         return "redirect:/list?manage=manage";
+    }
+
+    /**
+     * 修改个人资料
+     */
+    @RequestMapping(value = "/profile")
+    public String updateProfile(Model model, HttpServletRequest request) {
+        log.info("---修改个人资料---");
+        User user = (User) getSession().getAttribute("user");
+        if (user == null) {
+            return "../login";
+        }
+        String uid = getRequest().getParameter("id");
+        UserInfo userInfo = userInfoService.findByUid(Long.valueOf(uid));
+        model.addAttribute("user", user);
+        model.addAttribute("userInfo", userInfo);
+        return "profile/profile";
+    }
+
+    @RequestMapping(value = "/saveImg")
+    @ResponseBody
+    public Map<String, Object> saveImg(Model model, HttpServletRequest request) {
+        log.info("保存图片成功");
+        Map map = new HashMap<String, Object>();
+        String imgUrl = getRequest().getParameter("url");
+        User user = (User) getSession().getAttribute("user");
+        user.setImgUrl(imgUrl);
+        userService.update(user);
+        map.put("msg", "success");
+        return map;
     }
 }

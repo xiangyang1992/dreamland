@@ -84,11 +84,12 @@
                                      <img src="${cont.imgUrl}">
                                 </a>
                             </div>
-                            <a href="#" target="_blank">
-                                <h2 class="author-h2">
-                                        ${cont.nickName}
-                                </h2>
-                            </a>
+                            <div class="author-h2">
+                                <div style="float: left;font-size: 15px;color: #9b8878">${cont.nickName}
+                                </div>
+                                <div style="float: left;margin-left: 10px;color: grey;margin-top: 2px;font-size: 12px">${cont.formData}
+                                </div>
+                            </div>
                         </div>
                         <h2>${cont.title}</h2>
                             ${cont.content}
@@ -110,7 +111,7 @@
                                 <span class="number hidden" id="up_${cont.id}">${cont.upvote}</span>
                             </a>
                             &nbsp;
-                            <a style="cursor: pointer;" onclisck="upvote_click(${cont.id},-1);">
+                            <a style="cursor: pointer;" onclick="upvote_click(${cont.id},-1);">
                                 <i class="icon icon-thumbs-o-down icon-2x"></i>
                                 <span class="number hidden" id="down_${cont.id}">${cont.downvote}</span>
                             </a>
@@ -172,7 +173,7 @@
                     <c:if test="${page.pageNum > 1}">
                         <li class="previous"><a href="${ctx}/index_list?pageNum=${page.pageNum-1}&&id=${user.id}">« 上一页</a></li>
                     </c:if>
-                    <c:forEach begin="1" end="${page.pages}" var="pn">
+                    <c:forEach begin="${page.startPage}" end="${page.endPage}" var="pn">
                         <c:if test="${page.pageNum == pn}">
                             <li class="active"><a href="javascript:void (0);">${pn}</a></li>
                         </c:if>

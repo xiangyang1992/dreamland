@@ -7,47 +7,42 @@
   </component>
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/dreamland-web/src/main/webapp/js/personal.js" line="94" mnemonic="9" />
+    <bookmark url="file://$PROJECT_DIR$/dreamland-web/src/main/webapp/js/profile/profile.js" description="}&#10;function base_set() {&#10;    document.getElementByI..." line="13" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbbe6db2-b953-44a7-a617-c79b5643ce04" name="Default Changelist" comment="发布博客">
-      <change beforePath="" afterPath="$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/personal/watch.jsp" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Tomcat.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/profile/passwordSuccess.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/profile/profile.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/profile/repassword.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/dreamland-web/src/main/webapp/js/profile/profile.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/common/DateUtils.java" afterPath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/common/DateUtils.java" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/common/PageHelper.java" afterPath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/common/PageHelper.java" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/BaseController.java" afterPath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/BaseController.java" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/IndexJspController.java" afterPath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/IndexJspController.java" />
       <change beforePath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/PersonalController.java" afterPath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/PersonalController.java" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/WriteController.java" afterPath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/WriteController.java" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/entity/UserContent.java" afterPath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/entity/UserContent.java" />
+      <change beforePath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/UploadController.java" afterPath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/UploadController.java" />
+      <change beforePath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/dao/UserContentMapper.java" afterPath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/dao/UserContentMapper.java" />
+      <change beforePath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/entity/UserInfo.java" afterPath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/entity/UserInfo.java" />
       <change beforePath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/interceptor/IndexJspFilter.java" afterPath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/interceptor/IndexJspFilter.java" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/CommentService.java" afterPath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/CommentService.java" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/UpvoteService.java" afterPath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/UpvoteService.java" />
       <change beforePath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/UserContentService.java" afterPath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/UserContentService.java" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/impl/CommentServiceImpl.java" afterPath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/impl/CommentServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/impl/UpvoteServiceImpl.java" afterPath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/impl/UpvoteServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/impl/UserContentServiceImpl.java" afterPath="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/impl/UserContentServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/dreamland-web/src/main/resource/mapping/userContent.xml" afterPath="$PROJECT_DIR$/dreamland-web/src/main/resource/mapping/userContent.xml" />
       <change beforePath="$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/personal/personal.jsp" afterPath="$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/personal/personal.jsp" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/write/writesuccess.jsp" afterPath="$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/write/writesuccess.jsp" />
       <change beforePath="$PROJECT_DIR$/dreamland-web/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/dreamland-web/src/main/webapp/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/src/main/webapp/js/personal.js" afterPath="$PROJECT_DIR$/dreamland-web/src/main/webapp/js/personal.js" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/controller/BaseController.class" afterPath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/controller/BaseController.class" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/dao/UserContentMapper.class" afterPath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/dao/UserContentMapper.class" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/service/CommentService.class" afterPath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/service/CommentService.class" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/service/UpvoteService.class" afterPath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/service/UpvoteService.class" />
+      <change beforePath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/common/PageHelper$Page.class" afterPath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/common/PageHelper$Page.class" />
+      <change beforePath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/common/PageHelper.class" afterPath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/common/PageHelper.class" />
+      <change beforePath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/entity/UserContent.class" afterPath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/entity/UserContent.class" />
+      <change beforePath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/entity/UserInfo.class" afterPath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/entity/UserInfo.class" />
       <change beforePath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/service/UserContentService.class" afterPath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/service/UserContentService.class" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/service/impl/CommentServiceImpl.class" afterPath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/service/impl/CommentServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/service/impl/UpvoteServiceImpl.class" afterPath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/service/impl/UpvoteServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/service/impl/UserContentServiceImpl.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/service/impl/UserContentServiceImpl.class" afterPath="$PROJECT_DIR$/dreamland-web/target/classes/keith/dreamland/www/service/impl/UserContentServiceImpl.class" />
+      <change beforePath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/common/PageHelper$Page.class" afterPath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/common/PageHelper$Page.class" />
+      <change beforePath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/common/PageHelper.class" afterPath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/common/PageHelper.class" />
+      <change beforePath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/controller/BaseController.class" afterPath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/controller/BaseController.class" />
       <change beforePath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/dao/UserContentMapper.class" afterPath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/dao/UserContentMapper.class" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/service/CommentService.class" afterPath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/service/CommentService.class" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/service/UpvoteService.class" afterPath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/service/UpvoteService.class" />
+      <change beforePath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/entity/UserContent.class" afterPath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/entity/UserContent.class" />
+      <change beforePath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/entity/UserInfo.class" afterPath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/entity/UserInfo.class" />
       <change beforePath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/service/UserContentService.class" afterPath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/service/UserContentService.class" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/service/impl/CommentServiceImpl.class" afterPath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/service/impl/CommentServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/service/impl/UpvoteServiceImpl.class" afterPath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/service/impl/UpvoteServiceImpl.class" />
       <change beforePath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/service/impl/UserContentServiceImpl.class" afterPath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/classes/keith/dreamland/www/service/impl/UserContentServiceImpl.class" />
       <change beforePath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/personal/personal.jsp" afterPath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/WEB-INF/personal/personal.jsp" />
+      <change beforePath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/index.jsp" afterPath="$PROJECT_DIR$/dreamland-web/target/dreamland-web/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/dreamland-web/target/" />
@@ -115,64 +110,70 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PersonalController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PersonalController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/PersonalController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+            <state relative-caret-position="394">
+              <caret line="130" column="43" lean-forward="true" selection-start-line="130" selection-start-column="43" selection-end-line="130" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/BaseController.java">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="77" column="70" lean-forward="true" selection-start-line="77" selection-start-column="70" selection-end-line="77" selection-end-column="70" />
+            <state relative-caret-position="494">
+              <caret line="83" column="53" lean-forward="false" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserContentService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/UserContentService.java">
+      <file leaf-file-name="IndexJspFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/interceptor/IndexJspFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+            <state relative-caret-position="380">
+              <caret line="30" column="68" lean-forward="false" selection-start-line="30" selection-start-column="68" selection-end-line="30" selection-end-column="68" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserContentServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserContentServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/impl/UserContentServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="53" column="16" lean-forward="true" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+            <state relative-caret-position="400">
+              <caret line="83" column="44" lean-forward="false" selection-start-line="83" selection-start-column="44" selection-end-line="83" selection-end-column="44" />
               <folding>
-                <element signature="e#4339#4340#0" expanded="true" />
-                <element signature="e#4396#4397#0" expanded="true" />
+                <element signature="e#3006#3007#0" expanded="true" />
+                <element signature="e#3063#3064#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserContentMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/dao/UserContentMapper.java">
+      <file leaf-file-name="userContent.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/resource/mapping/userContent.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-              <folding />
+            <state relative-caret-position="1043">
+              <caret line="55" column="21" lean-forward="true" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+              <folding>
+                <marker date="1562225843169" expanded="true" signature="295:417" ph="SELECT CATEG... USER_CONTENT" />
+                <marker date="1562225843169" expanded="true" signature="859:1130" ph="INSERT INTO user_content... " />
+                <marker date="1562225843169" expanded="true" signature="1207:1433" ph="SELECT id,u_... User_Content" />
+                <marker date="1562225843169" expanded="true" signature="2289:2500" ph="select u1.id... user_content" />
+                <marker date="1562225843169" expanded="true" signature="2289:3141" ph="select u1.id... user_content" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexJspController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/IndexJspController.java">
+      <file leaf-file-name="UploadController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/UploadController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2380">
-              <caret line="69" column="17" lean-forward="true" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
+            <state relative-caret-position="0">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -195,11 +196,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>请先注册</find>
-      <find>code</find>
-      <find>password_span</find>
-      <find>/upvote</find>
-      <find>wang.dreamland</find>
       <find>wang</find>
       <find>//微信</find>
       <find>$(document).ready</find>
@@ -225,6 +221,11 @@
       <find>doWritedream</find>
       <find>梦</find>
       <find>author clearfix</find>
+      <find>findCategoryByUid</find>
+      <find>set_title</find>
+      <find>img-change</find>
+      <find>hot</find>
+      <find>upload-form</find>
     </findStrings>
     <replaceStrings>
       <replace>$</replace>
@@ -247,9 +248,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/entity/User.java" />
-        <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/entity/UserInfo.java" />
-        <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/entity/Upvote.java" />
         <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/entity/RoleUser.java" />
         <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/entity/RoleResource.java" />
         <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/entity/Role.java" />
@@ -274,30 +272,33 @@
         <option value="$PROJECT_DIR$/dreamland-web/src/main/webapp/js/index.js" />
         <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/entity/Comment.java" />
-        <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/UploadController.java" />
-        <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/dao/UserContentMapper.java" />
         <option value="$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/write/writedream.jsp" />
-        <option value="$PROJECT_DIR$/dreamland-web/src/main/resource/mapping/userContent.xml" />
         <option value="$PROJECT_DIR$/dreamland-web/src/main/webapp/js/watch.js" />
         <option value="$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/personal/watch.jsp" />
         <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/UpvoteService.java" />
         <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/impl/UpvoteServiceImpl.java" />
         <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/CommentService.java" />
         <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/impl/CommentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/interceptor/IndexJspFilter.java" />
         <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/BaseController.java" />
-        <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/UserContentService.java" />
-        <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/impl/UserContentServiceImpl.java" />
         <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/IndexJspController.java" />
         <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/common/DateUtils.java" />
         <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/entity/UserContent.java" />
         <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/WriteController.java" />
         <option value="$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/write/writesuccess.jsp" />
         <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/common/PageHelper.java" />
-        <option value="$PROJECT_DIR$/dreamland-web/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/personal/personal.jsp" />
+        <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/UserContentService.java" />
         <option value="$PROJECT_DIR$/dreamland-web/src/main/webapp/js/personal.js" />
+        <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/entity/UserInfo.java" />
         <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/PersonalController.java" />
+        <option value="$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/profile/profile.jsp" />
+        <option value="$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/personal/personal.jsp" />
+        <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/UploadController.java" />
+        <option value="$PROJECT_DIR$/dreamland-web/src/main/webapp/js/profile/profile.js" />
+        <option value="$PROJECT_DIR$/dreamland-web/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/dao/UserContentMapper.java" />
+        <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/interceptor/IndexJspFilter.java" />
+        <option value="$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/impl/UserContentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/dreamland-web/src/main/resource/mapping/userContent.xml" />
       </list>
     </option>
   </component>
@@ -371,6 +372,9 @@
             <id>Probable bugsJavaScript</id>
           </State>
           <State>
+            <id>SQL</id>
+          </State>
+          <State>
             <id>SetupSpring CoreSpring</id>
           </State>
           <State>
@@ -382,7 +386,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>ConstantConditions</id>
+            <id>SqlNoDataSourceInspection</id>
           </State>
         </selected-state>
       </profile-state>
@@ -406,9 +410,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -459,7 +460,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dreamland" type="b2602c69:ProjectViewProjectNode" />
@@ -469,7 +470,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="www" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dreamland" type="b2602c69:ProjectViewProjectNode" />
@@ -477,22 +478,19 @@
               <item name="dreamland-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dreamland" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dreamland" type="462c0819:PsiDirectoryNode" />
-              <item name="dreamland-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -510,19 +508,19 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\MyPro\dreamland\dreamland-web\src\main\webapp\images\image" />
-      <recent name="D:\MyPro\dreamland\dreamland-web\src\main\webapp" />
-      <recent name="D:\MyPro\dreamland\dreamland-web\src\main\webapp\WEB-INF" />
-      <recent name="D:\MyPro\dreamland\dreamland-web\src\main\webapp\WEB-INF\regist" />
-      <recent name="D:\MyPro\dreamland\dreamland-web\src\main\webapp\WEB-INF\jsp" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MyPro\dreamland\dreamland-web\src\main\webapp\WEB-INF\profile" />
+      <recent name="D:\MyPro\dreamland\dreamland-web\src\main\webapp\WEB-INF" />
       <recent name="D:\MyPro\dreamland\dreamland-web\src\main\webapp\WEB-INF\personal" />
       <recent name="D:\MyPro\dreamland\dreamland-web\src\main\java\keith\dreamland\www\controller" />
-      <recent name="D:\MyPro\dreamland\dreamland-web\src\main\webapp\WEB-INF" />
       <recent name="D:\MyPro\dreamland\dreamland-web\src\main\resource\mapping" />
-      <recent name="D:\MyPro\dreamland\dreamland-web\src\main\webapp\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\MyPro\dreamland\dreamland-web\src\main\webapp\WEB-INF\profile" />
+      <recent name="D:\MyPro\dreamland\dreamland-web\src\main\webapp" />
+      <recent name="D:\MyPro\dreamland\dreamland-web\src\main\webapp\images\image" />
+      <recent name="D:\MyPro\dreamland\dreamland-web\src\main\webapp\WEB-INF" />
+      <recent name="D:\MyPro\dreamland\dreamland-web\src\main\webapp\WEB-INF\regist" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -684,7 +682,8 @@
       <workItem from="1561861742382" duration="14665000" />
       <workItem from="1561943245057" duration="21022000" />
       <workItem from="1562039393725" duration="205000" />
-      <workItem from="1562039676454" duration="18179000" />
+      <workItem from="1562039676454" duration="39570000" />
+      <workItem from="1562202934101" duration="7372000" />
     </task>
     <task id="LOCAL-00001" summary="Default Changelist">
       <created>1557907701502</created>
@@ -798,7 +797,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561989290408</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="发布博客">
+      <created>1562070723290</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1562070723290</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -834,7 +840,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="293598000" />
+    <option name="totallyTimeSpent" value="322361000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -856,22 +862,22 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18710022" sideWeight="0.5079681" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47116432" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4570185" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32752994" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31229597" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31229597" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5255713" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22814499" sideWeight="0.49203187" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23081024" sideWeight="0.49203187" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -949,40 +955,16 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/IndexJspController.java</url>
-          <line>62</line>
-          <properties />
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/PersonalController.java</url>
-          <line>76</line>
-          <properties />
-          <option name="timeStamp" value="79" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/BaseController.java</url>
           <line>77</line>
           <properties />
           <option name="timeStamp" value="84" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/PersonalController.java</url>
-          <line>79</line>
-          <properties />
-          <option name="timeStamp" value="85" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/impl/UserContentServiceImpl.java</url>
-          <line>54</line>
-          <properties />
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="87" />
+      <option name="time" value="95" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1008,62 +990,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/entity/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/entity/RoleResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/entity/RoleUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/entity/Upvote.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/entity/UserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/dao/CommentMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="31" column="31" lean-forward="false" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1092,34 +1018,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/UploadController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.2.5.RELEASE/spring-webmvc-4.2.5.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="402" column="0" lean-forward="false" selection-start-line="402" selection-start-column="0" selection-end-line="402" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.2.5.RELEASE/spring-webmvc-4.2.5.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="475" column="0" lean-forward="false" selection-start-line="475" selection-start-column="0" selection-end-line="475" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/resource/mapping/userContent.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="123" lean-forward="false" selection-start-line="17" selection-start-column="123" selection-end-line="17" selection-end-column="123" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/7.0/javaee-api-7.0-sources.jar!/javax/servlet/ServletRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="772">
@@ -1129,10 +1027,282 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/webapp/js/watch.js" />
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/write/writedream.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1558">
+          <caret line="82" column="98" lean-forward="false" selection-start-line="82" selection-start-column="95" selection-end-line="82" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/tk/mybatis/mapper/3.1.2/mapper-3.1.2.jar!/tk/mybatis/mapper/common/base/delete/DeleteByPrimaryKeyMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/impl/CommentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="81" column="31" lean-forward="true" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/CommentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="717">
+          <caret line="67" column="9" lean-forward="false" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/impl/UpvoteServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="40" column="30" lean-forward="false" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/UpvoteService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="38" column="17" lean-forward="false" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/tk/mybatis/mapper/3.1.2/mapper-3.1.2.jar!/tk/mybatis/mapper/common/base/select/SelectMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="41" column="27" lean-forward="false" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/common/DateUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/entity/UserContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="717">
+          <caret line="148" column="28" lean-forward="true" selection-start-line="148" selection-start-column="28" selection-end-line="148" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2833#2834#0" expanded="false" />
+            <element signature="e#2913#2914#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/common/PageHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="280" column="12" lean-forward="false" selection-start-line="280" selection-start-column="12" selection-end-line="280" selection-end-column="12" />
+          <folding>
+            <element signature="e#6617#6618#0" expanded="false" />
+            <element signature="e#6642#6643#0" expanded="false" />
+            <element signature="e#6687#6688#0" expanded="false" />
+            <element signature="e#6722#6723#0" expanded="false" />
+            <element signature="e#6751#6752#0" expanded="false" />
+            <element signature="e#6774#6775#0" expanded="false" />
+            <element signature="e#6815#6816#0" expanded="false" />
+            <element signature="e#6846#6847#0" expanded="false" />
+            <marker date="1562067709482" expanded="true" signature="4559:4602" ph="select count... missingValue" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/write/writesuccess.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="698">
+          <caret line="52" column="47" lean-forward="false" selection-start-line="52" selection-start-column="47" selection-end-line="52" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/personal/watch.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4337">
+          <caret line="389" column="14" lean-forward="true" selection-start-line="389" selection-start-column="14" selection-end-line="389" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/tk/mybatis/mapper/3.1.2/mapper-3.1.2.jar!/tk/mybatis/mapper/entity/Example.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1717">
+          <caret line="49" column="32" lean-forward="true" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/tk/mybatis/mapper/3.1.2/mapper-3.1.2.jar!/tk/mybatis/mapper/common/Mapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/reflect/Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="193" column="0" lean-forward="false" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
+          <folding>
+            <element signature="e#6249#6250#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.2.5.RELEASE/spring-core-4.2.5.RELEASE.jar!/org/springframework/util/ReflectionUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="209" column="0" lean-forward="false" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/tk/mybatis/mapper/3.1.2/mapper-3.1.2.jar!/tk/mybatis/mapper/common/example/SelectByExampleMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/resource/mapping/comment.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="45" column="61" lean-forward="true" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
+          <folding>
+            <marker date="1561357754004" expanded="true" signature="278:545" ph="select c.id,... comment" />
+            <marker date="1561357754004" expanded="true" signature="1377:1547" ph="INSERT INTO comment... " />
+            <marker date="1561357754004" expanded="true" signature="1639:1907" ph="select c.id,... comment" />
+            <marker date="1561357754004" expanded="true" signature="3063:3425" ph="select c.id,... comment" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.2.5.RELEASE/spring-webmvc-4.2.5.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="402" column="0" lean-forward="false" selection-start-line="402" selection-start-column="0" selection-end-line="402" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.2.5.RELEASE/spring-webmvc-4.2.5.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="476" column="0" lean-forward="false" selection-start-line="476" selection-start-column="0" selection-end-line="476" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/resource/mapping/user.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.5.RELEASE/spring-web-4.2.5.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/UserContentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="25" column="54" lean-forward="false" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/profile/passwordSuccess.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/webapp/css/My_css/my.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/webapp/js/personal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4541">
+          <caret line="239" column="67" lean-forward="false" selection-start-line="239" selection-start-column="67" selection-end-line="239" selection-end-column="67" />
+          <folding>
+            <marker date="1562133734023" expanded="true" signature="837:852" ph="..." />
+            <marker date="1562133734023" expanded="true" signature="3692:3707" ph="..." />
+            <marker date="1562133734023" expanded="true" signature="8525:8540" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/entity/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="679">
+          <caret line="82" column="14" lean-forward="false" selection-start-line="82" selection-start-column="14" selection-end-line="82" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/WriteController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="86" column="90" lean-forward="false" selection-start-line="86" selection-start-column="87" selection-end-line="86" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/personal/personal.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2569">
+          <caret line="424" column="18" lean-forward="true" selection-start-line="424" selection-start-column="18" selection-end-line="424" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#a#0;n#div#3;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/webapp/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        <state relative-caret-position="297">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="56" selection-end-column="1" />
           <folding>
             <marker date="1561627114148" expanded="true" signature="3395:3409" ph="..." />
             <marker date="1561627114148" expanded="true" signature="3480:3494" ph="..." />
@@ -1151,302 +1321,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/write/writedream.jsp">
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1558">
-          <caret line="82" column="98" lean-forward="false" selection-start-line="82" selection-start-column="95" selection-end-line="82" selection-end-column="98" />
+        <state relative-caret-position="289">
+          <caret line="3845" column="4" lean-forward="false" selection-start-line="3845" selection-start-column="4" selection-end-line="3845" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/tk/mybatis/mapper/3.1.2/mapper-3.1.2.jar!/tk/mybatis/mapper/common/base/delete/DeleteByPrimaryKeyMapper.class">
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/UploadController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+        <state relative-caret-position="0">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/impl/CommentServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/profile/profile.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="81" column="31" lean-forward="true" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
+        <state relative-caret-position="269">
+          <caret line="164" column="71" lean-forward="false" selection-start-line="164" selection-start-column="62" selection-end-line="164" selection-end-column="71" />
           <folding>
-            <element signature="e#2322#2323#0" expanded="true" />
-            <element signature="e#2375#2376#0" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/CommentService.java">
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/webapp/js/profile/profile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="67" column="9" lean-forward="false" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/impl/UpvoteServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="40" column="30" lean-forward="false" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-          <folding>
-            <element signature="e#1056#1057#0" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/UpvoteService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="38" column="17" lean-forward="false" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/tk/mybatis/mapper/3.1.2/mapper-3.1.2.jar!/tk/mybatis/mapper/common/base/select/SelectMapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="41" column="27" lean-forward="false" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/interceptor/IndexJspFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="21" column="92" lean-forward="false" selection-start-line="21" selection-start-column="87" selection-end-line="21" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/WriteController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="81" column="34" lean-forward="false" selection-start-line="81" selection-start-column="22" selection-end-line="81" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/common/DateUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/entity/UserContent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="148" column="28" lean-forward="true" selection-start-line="148" selection-start-column="28" selection-end-line="148" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2833#2834#0" expanded="true" />
-            <element signature="e#2913#2914#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/common/PageHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="280" column="12" lean-forward="false" selection-start-line="280" selection-start-column="12" selection-end-line="280" selection-end-column="12" />
-          <folding>
-            <element signature="e#6617#6618#0" expanded="true" />
-            <element signature="e#6642#6643#0" expanded="true" />
-            <element signature="e#6687#6688#0" expanded="true" />
-            <element signature="e#6722#6723#0" expanded="true" />
-            <element signature="e#6751#6752#0" expanded="true" />
-            <element signature="e#6774#6775#0" expanded="true" />
-            <element signature="e#6815#6816#0" expanded="true" />
-            <element signature="e#6846#6847#0" expanded="true" />
-            <marker date="1562067709482" expanded="true" signature="4559:4602" ph="select count... missingValue" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/write/writesuccess.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="698">
-          <caret line="52" column="47" lean-forward="false" selection-start-line="52" selection-start-column="47" selection-end-line="52" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/personal/watch.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4337">
-          <caret line="389" column="14" lean-forward="true" selection-start-line="389" selection-start-column="14" selection-end-line="389" selection-end-column="14" />
+        <state relative-caret-position="489">
+          <caret line="67" column="20" lean-forward="false" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-209">
-          <caret line="175" column="76" lean-forward="false" selection-start-line="175" selection-start-column="76" selection-end-line="175" selection-end-column="76" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/webapp/WEB-INF/personal/personal.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/webapp/js/personal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="236" column="10" lean-forward="false" selection-start-line="236" selection-start-column="10" selection-end-line="236" selection-end-column="10" />
-          <folding>
-            <marker date="1562068418833" expanded="true" signature="837:852" ph="..." />
-            <marker date="1562068418833" expanded="true" signature="3692:3707" ph="..." />
-            <marker date="1562068418833" expanded="true" signature="8525:8540" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/tk/mybatis/mapper/3.1.2/mapper-3.1.2.jar!/tk/mybatis/mapper/entity/Example.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1717">
-          <caret line="49" column="32" lean-forward="true" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
-          <folding>
-            <element signature="e#1524#1525#0" expanded="true" />
-            <element signature="e#1574#1575#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/tk/mybatis/mapper/3.1.2/mapper-3.1.2.jar!/tk/mybatis/mapper/common/example/SelectByExampleMapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/tk/mybatis/mapper/3.1.2/mapper-3.1.2.jar!/tk/mybatis/mapper/common/Mapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state relative-caret-position="494">
+          <caret line="83" column="53" lean-forward="false" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/dao/UserContentMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+        <state relative-caret-position="285">
+          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/IndexJspController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2380">
-          <caret line="69" column="17" lean-forward="true" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
+        <state relative-caret-position="703">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.5.RELEASE/spring-web-4.2.5.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/interceptor/IndexJspFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        <state relative-caret-position="380">
+          <caret line="30" column="68" lean-forward="false" selection-start-line="30" selection-start-column="68" selection-end-line="30" selection-end-column="68" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/PersonalController.java">
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/resource/mapping/userContent.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/UserContentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/reflect/Method.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="193" column="0" lean-forward="false" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
+        <state relative-caret-position="1043">
+          <caret line="55" column="21" lean-forward="true" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
           <folding>
-            <element signature="e#6249#6250#0" expanded="true" />
+            <marker date="1562225843169" expanded="true" signature="295:417" ph="SELECT CATEG... USER_CONTENT" />
+            <marker date="1562225843169" expanded="true" signature="859:1130" ph="INSERT INTO user_content... " />
+            <marker date="1562225843169" expanded="true" signature="1207:1433" ph="SELECT id,u_... User_Content" />
+            <marker date="1562225843169" expanded="true" signature="2289:2500" ph="select u1.id... user_content" />
+            <marker date="1562225843169" expanded="true" signature="2289:3141" ph="select u1.id... user_content" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding>
-            <element signature="e#2183#2184#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.2.5.RELEASE/spring-core-4.2.5.RELEASE.jar!/org/springframework/util/ReflectionUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="209" column="0" lean-forward="false" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="77" column="70" lean-forward="true" selection-start-line="77" selection-start-column="70" selection-end-line="77" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/service/impl/UserContentServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="53" column="16" lean-forward="true" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+        <state relative-caret-position="400">
+          <caret line="83" column="44" lean-forward="false" selection-start-line="83" selection-start-column="44" selection-end-line="83" selection-end-column="44" />
           <folding>
-            <element signature="e#4339#4340#0" expanded="true" />
-            <element signature="e#4396#4397#0" expanded="true" />
+            <element signature="e#3006#3007#0" expanded="true" />
+            <element signature="e#3063#3064#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dreamland-web/src/main/java/keith/dreamland/www/controller/PersonalController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="130" column="43" lean-forward="true" selection-start-line="130" selection-start-column="43" selection-end-line="130" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -25,9 +25,10 @@ public class IndexJspFilter implements Filter {
         ApplicationContext ctx = WebApplicationContextUtils.getWebApplicationContext(context);
         UserContentMapper userContentMapper = ctx.getBean(UserContentMapper.class);
         PageHelper.startPage(null, null);//分页开始
-        Example e = new Example(UserContent.class);
-        e.setOrderByClause("rpt_time DESC");
-        List<UserContent> list = userContentMapper.selectByExample(e);
+//        Example e = new Example(UserContent.class);
+//        e.setOrderByClause("rpt_time DESC");
+//        List<UserContent> list = userContentMapper.selectByExample(e);
+        List<UserContent> list = userContentMapper.findByJoin(null);
         PageHelper.Page endPage = PageHelper.endPage();//分页结束
         request.setAttribute("page", endPage);
         chain.doFilter(request, response);
