@@ -1,3 +1,4 @@
+<%@ page import="java.util.UUID" %>
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
@@ -12,7 +13,7 @@
     <link href="${ctx}/css/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"/>
     <link href="${ctx}/css/zui/css/zui.min.css" rel="stylesheet"/>
     <link href="${ctx}/css/zui/css/zui-theme.min.css" rel="stylesheet"/>
-    <script type="text/javascript" src="${ctx}/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="${ctx}/js/jquery/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="${ctx}/css/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="${ctx}/css/zui/js/zui.min.js"></script>
     <style>
@@ -174,10 +175,12 @@
             <div style="float: left;margin-top: 40px;margin-left: 50px">
 
                 <form action="${ctx}/updatePassword" method="post" id="update_password">
-                    <input onblur="oldPassword();" id="old_password" name="old_password" type="password" placeholder="    输入旧密码" style="width: 350px;height: 50px"/><br/><br/>
+                    <input onblur="oldPassword();" id="old_password" name="old_password" type="password" placeholder="    输入旧密码" style="width: 350px;height: 50px"/><br/>
                     <span id="old_span" style="color:red;"></span><br/>
-                    <input onblur="newPassword();" id="password" name="password" type="password" placeholder="    输入新密码" style="width: 350px;height: 50px"/><br/><br/><br/>
-                    <input onblur="rePassword();" id="repassword" type="password" placeholder="    确认新密码" style="width: 350px;height: 50px"/><br/><br/><br/>
+                    <input onblur="newPassword();" id="password" name="password" type="password" placeholder="    输入新密码" style="width: 350px;height: 50px"/><br/><br/>
+                    <%--<span id="new_span" style="color:red;"></span>--%>
+                    <input onblur="rePassword();" id="repassword" type="password" placeholder="    确认新密码" style="width: 350px;height: 50px"/><br/><br/>
+                    <%--<span id="re_span" style="color:red;"></span>--%>
                     <br/>
                     <button onclick="surePost();" style="background-color: #0a67fb;height: 50px"  class="btn btn-block " type="button"><span style="color: white">确认</span></button>
                 </form>
@@ -300,8 +303,5 @@
 
 
 </body>
-<script>
-
-
-</script>
+<script type="text/javascript" src="${ctx}/js/profile/repassword.js?V=<%=UUID.randomUUID()%>"></script>
 </html>

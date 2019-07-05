@@ -160,7 +160,7 @@
 
                 </a></li>
             </ul>
-            <img src="images/q.png" width="30" style="margin-top: 4px"/>
+            <img src="${ctx}/images/q.png" width="30px" style="margin-top: 4px"/>
         </div><!-- END .navbar-collapse -->
     </div>
 
@@ -176,11 +176,11 @@
             <div style="float: left;background-color:#EAEAEA;height: 1px;width: 300px;margin-left: 80px;margin-top: 30px"> </div>
 
             <div style="float: left;margin-top: 40px;margin-left: 50px;">
-                <c:if test="${message eq 'success'}">
+                <c:if test="${msg eq 'success'}">
                     <span style="color: green;margin-left: 140px;font-size: 16px">修改成功！</span>
                     <button onclick="relogin();" style="background-color: #5CACEE;height: 30px;width: 80px;margin-left: 140px;margin-top: 50px"  class="btn btn-block " type="button"><span style="color: #EBEBEB">重新登录</span></button>
                 </c:if>
-                <c:if test="${message eq 'fail'}">
+                <c:if test="${msg eq 'fail'}">
                     <span style="color: red;margin-left: 140px;font-size: 16px">修改失败！</span>
                     <button onclick="back();" style="background-color: #5CACEE;height: 30px;width: 80px;margin-left: 140px;margin-top: 50px"  class="btn btn-block " type="button"><span style="color: #EBEBEB">返回</span></button>
                 </c:if>

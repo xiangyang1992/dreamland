@@ -16,7 +16,7 @@ public class UserInfoServiceImpl implements UserInfoService {
     @Transactional
     public UserInfo findByUid(Long id) {
         UserInfo userInfo = new UserInfo();
-        userInfo.setId(id);
+        userInfo.setuId(id);
         return userInfoMapper.selectOne(userInfo);
     }
 

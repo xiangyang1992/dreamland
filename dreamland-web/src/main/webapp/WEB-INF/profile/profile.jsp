@@ -19,6 +19,7 @@
     <script type="text/javascript" src="${ctx}/css/zui/js/zui.min.js"></script>
     <link href="${ctx}/css/zui/lib/datetimepicker/datetimepicker.min.css" rel="stylesheet">
     <script src="${ctx}/css/zui/lib/datetimepicker/datetimepicker.min.js"></script>
+    <link href="${ctx}/css/zui/lib/datetimepicker/datetimepicker.min.css" rel="stylesheet">
     <style>
         body,html{
             background-color: #EBEBEB;
@@ -172,10 +173,6 @@
         </div>
 
         </div>
-
-
-
-
         <div  style="width: 300px;height: 100%">
 
             <div id="base" onclick="base_set();" style="background-color: white">
@@ -227,10 +224,10 @@
                     昵称：<input id="nick_name" name="nick_name" value="${user.nickName}"/><br/><br/>
 
 
-                    性别：  <input type="radio" name="sex" value="0" checked <c:if test="${userInfo.sex eq '0'}"> checked="checked"</c:if>/>男 &nbsp;&nbsp;
-                            <input type="radio" name="sex" value="1" <c:if test="${userInfo.sex eq '1'}"> checked="checked"</c:if>/>女<br/><br/>
+                    性别：  <input type="radio" name="sex" value="0" checked <c:if test="${userInfo.sex eq '男'}"> checked="checked"</c:if>/>男 &nbsp;&nbsp;
+                            <input type="radio" name="sex" value="1" <c:if test="${userInfo.sex eq '女'}"> checked="checked"</c:if>/>女<br/><br/>
 
-                    生日： <input  style="width: 198px;float: right;margin-right: 484px;margin-top: -4px" class="form-control form-date"  readonly="readonly" placeholder="选择一个日期：yyyy-MM-dd" type="text" id="txtEndDate"  name="birthday" value="${userInfo.formateBirthday==null?"":userInfo.formateBirthday}"/><br/><br/>
+                    生日： <input  style="width: 198px;float: right;margin-right: 484px;margin-top: -4px" class="form-control form-date"  placeholder="选择一个日期：yyyy-MM-dd" type="text" id="txtEndDate"  name="birthday" value="${userInfo.formateBirthday==null?"":userInfo.formateBirthday}"/><br/><br/>
 
 
                     地址： <input id="address" name="address" value="${userInfo.address}"/><br/><br/>

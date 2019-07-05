@@ -88,3 +88,31 @@ function FormatDate(strTime) {
     if (s<10) s = '0'+s;
     return date.getFullYear()+'-'+month+'-'+date.getDate()+" "+h+':'+m+':'+s;
 }
+
+$(".form-date").datetimepicker(
+    {
+        language:  "zh-CN",
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0,
+        format: "yyyy-mm-dd"
+    });
+
+//保存修改个人信息
+function saveUserInfo() {
+    $("#userInfo_form").submit();
+}
+
+function changeColor() {
+    // document.getElementById("password_span").style.color = "purple";
+    $("#password_span").css("color", "purple");
+}
+
+function backColor() {
+    $("#password_span").css("color", "grey");
+    // document.getElementById("password_span").style.color = "grey";
+}

@@ -13,8 +13,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <link type="text/css" rel="stylesheet" href="${ctx}/css/dreamland.css">
-    <script type="text/javascript" src="../../js/jquery/jquery.min.js"></script>
-    <%--<script type="text/javascript" src="images/lib/js/jquery.min.js"></script>--%>
+    <script type="text/javascript" src="${ctx}/js/jquery/jquery.min.js"></script>
 </head>
 
 <body class="login_bj" style="background-color: grey">
@@ -58,13 +57,14 @@
                 
                 </form>
             </div>
-        	<div id="regist-right" class="bj_right" style="height: 468px">
             	<p>使用以下账号直接登录</p>
-                <a href="#" class="zhuce_qq">QQ注册</a>
-                <a href="#" class="zhuce_wb">微博注册</a>
-                <a href="#" class="zhuce_wx">微信注册</a>
-                <p>已有账号？<a href="login.html">立即登录</a></p>
-            
+                <div id="regist-right" class="bj_right" style="height: 468px">
+                    <p>使用以下账号直接登录</p>
+                    <div>
+                        <a href="to_login"><img src="${ctx}/images/Connect_logo_3.png" /></a>
+                    </div>
+                    <p>已有账号？<a href="login.html">立即登录</a></p>
+                </div>
             </div>
         </div>
     </div>

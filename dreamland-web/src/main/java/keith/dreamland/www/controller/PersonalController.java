@@ -1,6 +1,9 @@
 package keith.dreamland.www.controller;
 
 import com.sun.org.apache.xpath.internal.operations.Mod;
+import keith.dreamland.www.common.Constants;
+import keith.dreamland.www.common.DateUtils;
+import keith.dreamland.www.common.MD5Util;
 import keith.dreamland.www.common.PageHelper;
 import keith.dreamland.www.entity.User;
 import keith.dreamland.www.entity.UserContent;
@@ -18,6 +21,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import sun.rmi.runtime.Log;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -160,5 +164,65 @@ public class PersonalController extends BaseController {
         userService.update(user);
         map.put("msg", "success");
         return map;
+    }
+
+    //保存个人信息
+    @RequestMapping(value = "/saveUserInfo")
+    public String  saveUserInfo(Model model, HttpServletRequest request,@RequestParam(value = "birthday",required = false)String  birthday) {
+        log.info("保存个人信息成功");
+        User user = (User) getSession().getAttribute("user");
+        String name = getRequest().getParameter("name");
+        String nickName = getRequest().getParameter("nick_name");
+        String sex = getRequest().getParameter("sex");
+        String address = getRequest().getParameter("address");
+        UserInfo userInfo = userInfoService.findByUid(user.getId());
+        userInfo.setAddress(address);
+        Date bir = DateUtils.StringtoDate(birthday, "yyyy-MM-dd");
+        userInfo.setBirthday(bir);
+        if (sex == "0" || "0".equals(sex)) {
+            userInfo.setSex("男");
+        } else {
+            userInfo.setSex("女");
+        }
+        userInfo.setName(name);
+        userInfoService.update(userInfo);
+        user.setNickName(nickName);
+        userService.update(user);
+        model.addAttribute("user", user);
+        model.addAttribute("userInfo", userInfo);
+        return "profile/profile";
+    }
+
+
+    //修改密码跳转
+    @RequestMapping(value = "/repassword")
+    public String updatePassword(Model model) {
+        User user = (User) getSession().getAttribute("user");
+        if (user == null) {
+            return "../login";
+        } else {
+            model.addAttribute("user", user);
+            return "profile/repassword";
+        }
+    }
+
+    //修改密码
+    @RequestMapping(value = "/updatePassword")
+    public String updatePassword(Model model,@RequestParam(value = "old_password",required = false)String oldPassword,
+                                 @RequestParam(value = "password",required = false)String password) {
+        User user = (User) getSession().getAttribute("user");
+        if (user != null) {
+            oldPassword = MD5Util.encodeToHex(Constants.SALT+oldPassword);
+            if (user.getPassword().equals(oldPassword)) {
+                password = MD5Util.encodeToHex(Constants.SALT + password);
+                user.setPassword(password);
+                userService.update(user);
+                model.addAttribute("msg", "success");
+            } else {
+                model.addAttribute("msg", "fail");
+            }
+        }
+        model.addAttribute("user", user);
+        return "profile/passwordSuccess";
     }
 }
